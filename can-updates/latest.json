@@ -1,0 +1,83 @@
+{
+  "version": "0.3.0",
+  "exeUrl": "https://xtooldev.github.io/cantool/can-updates/CANAnalyzer.exe",
+  "baseUrl": "https://xtooldev.github.io/cantool/can-updates",
+  "files": [
+    {
+      "path": "CANAnalyzer.exe",
+      "size": 9600512
+    },
+    {
+      "path": "resources/fcm_can_helper.exe",
+      "size": 126976
+    },
+    {
+      "path": "resources/ControlCAN.dll",
+      "size": 13312
+    },
+    {
+      "path": "resources/kerneldlls/CAN232.dll",
+      "size": 53248
+    },
+    {
+      "path": "resources/kerneldlls/CANDTU_NET.dll",
+      "size": 311296
+    },
+    {
+      "path": "resources/kerneldlls/CANDTU_NET_400.dll",
+      "size": 311296
+    },
+    {
+      "path": "resources/kerneldlls/CANDTU_WIFI.dll",
+      "size": 2658304
+    },
+    {
+      "path": "resources/kerneldlls/CANETE.dll",
+      "size": 229376
+    },
+    {
+      "path": "resources/kerneldlls/CANET_TCP.dll",
+      "size": 303104
+    },
+    {
+      "path": "resources/kerneldlls/CANWIFI_TCP.dll",
+      "size": 303104
+    },
+    {
+      "path": "resources/kerneldlls/CANWIFI_UDP.dll",
+      "size": 233472
+    },
+    {
+      "path": "resources/kerneldlls/gisadll.dll",
+      "size": 40960
+    },
+    {
+      "path": "resources/kerneldlls/gpcidll.dll",
+      "size": 40960
+    },
+    {
+      "path": "resources/kerneldlls/isa5420.dll",
+      "size": 45056
+    },
+    {
+      "path": "resources/kerneldlls/kerneldll.ini",
+      "size": 867
+    },
+    {
+      "path": "resources/kerneldlls/PC104C2.dll",
+      "size": 45056
+    },
+    {
+      "path": "resources/kerneldlls/PC104CAN.dll",
+      "size": 57344
+    },
+    {
+      "path": "resources/kerneldlls/PCI5121.dll",
+      "size": 53248
+    },
+    {
+      "path": "resources/kerneldlls/usbcan.dll",
+      "size": 52912
+    }
+  ]
+}
