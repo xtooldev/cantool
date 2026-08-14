@@ -1,12 +1,16 @@
 {
   "version": "0.3.11",
-  "exeUrl": "https://u.scwy.net/-RDXoMEHfiS/CANAnalyzer.exe",
+  "exeUrl": "https://u.scwy.net/-FEPRPqQbvh/CANAnalyzer.exe",
   "baseUrl": "https://xtooldev.github.io/cantool/can-updates",
   "files": [
     {
       "path": "CANAnalyzer.exe",
-      "size": 10001920,
-      "url": "https://u.scwy.net/-RDXoMEHfiS/CANAnalyzer.exe"
+      "size": 9973760,
+      "url": "https://u.scwy.net/-FEPRPqQbvh/CANAnalyzer.exe"
+    },
+    {
+      "path": "resources/updater.exe",
+      "size": 319488
     },
     {
       "path": "resources/fcm_can_helper.exe",
