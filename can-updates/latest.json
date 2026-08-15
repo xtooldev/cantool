@@ -1,12 +1,12 @@
 {
   "version": "0.3.12",
-  "exeUrl": "https://u.scwy.net/-eJkj4ATfxi/CANAnalyzer.exe",
+  "exeUrl": "https://u.scwy.net/-ZKzHnTaKF2/CANAnalyzer.exe",
   "baseUrl": "https://xtooldev.github.io/cantool/can-updates",
   "files": [
     {
       "path": "CANAnalyzer.exe",
       "size": 9973760,
-      "url": "https://u.scwy.net/-eJkj4ATfxi/CANAnalyzer.exe"
+      "url": "https://u.scwy.net/-ZKzHnTaKF2/CANAnalyzer.exe"
     },
     {
       "path": "resources/updater.exe",
