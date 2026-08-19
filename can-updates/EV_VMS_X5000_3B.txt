@@ -1,0 +1,4922 @@
+0x00,0x00,0x00,0x00,0x00,0x00		\"
+[COMMSET]		\n\
+	Protocol=PTL_CAN_EXT		\n\
+	ToolId=18DA27FA		\n\
+	EcuId=18DAFA27		\n\
+	CommTime=1,20,500,80		\n\
+	KwpFormat=		\n\
+	TimeOut=3000		\n\
+	Bps=500k		\n\
+	CommPort=6E		\n\
+	InitCmd=1003		\n\
+	EnterCmd=		\n\
+	FlowCrlCmd=3000000000000000		\n\
+	KeepLink=3E00		\n\
+	KeepTime=1000		\n\
+	ExitCmd=		\n\
+	SecAccMode=		\n\
+	SecAccSeedCmd=		\n\
+	SecAccKeyCmd=		\n\
+	SecAccMask=		\n\
+		\n"
+
+0x00,0x00,0x00,0x00,0x00,0x01		\"
+[FUNCMENU]		\n\
+	BaseMenu=01,02,03,04,05,06		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x00		\"
+[ECUINFO]		\n\
+	Mode=01		\n\
+	Begin=1		\n\
+	End=29		\n\
+	Lib=01		\n\
+		\n"
+
+0x00,0x00,0x02,0x00,0x00,0x00		\"
+[READDTC]		\n\
+	SubMenu=当前故障	01	历史故障	02		\n\
+[01]		\n\
+	Mode=01		\n\
+	Cmd=190201		\n\
+	Len=4		\n\
+	StartPos=3		\n\
+	OrgExpression="%06X","x1*0x10000+x2*0x100+x3"		\n\
+	StateExpression="当前故障","@0"		\n\
+	Begin=1		\n\
+	End=315		\n\
+[02]		\n\
+	Mode=01		\n\
+	Cmd=190208		\n\
+	Len=4		\n\
+	StartPos=3		\n\
+	OrgExpression="%06X","x1*0x10000+x2*0x100+x3"		\n\
+	StateExpression="历史故障","@0"		\n\
+	Begin=1		\n\
+	End=315		\n\
+		\n"
+
+0x00,0x00,0x03,0x00,0x00,0x00		\"
+[CLEARDTC]		\n\
+	Mode=01		\n\
+	Cmd=14FFFFFF		\n\
+		\n"
+
+0x00,0x00,0x04,0x00,0x00,0x00		\"
+[LIVEDATA]		\n\
+	Mode=01		\n\
+	Begin=1		\n\
+	End=95		\n\
+	Enum=		\n\
+	Lib=02		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x01		\"
+[ECUINFOITEM]		\n\
+	Name=引导标识模块		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTOInReverseOrder		\n\
+	Cmd=22F180		\n\
+	StartPos=3		\n\
+	Len=2		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x02		\"
+[ECUINFOITEM]		\n\
+	Name=引导标识版本		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F180		\n\
+	StartPos=5		\n\
+	Len=2		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x03		\"
+[ECUINFOITEM]		\n\
+	Name=引导标识零件号		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F180		\n\
+	StartPos=7		\n\
+	Len=3		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x04		\"
+[ECUINFOITEM]		\n\
+	Name=应用标识模块		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTOInReverseOrder		\n\
+	Cmd=22F181		\n\
+	StartPos=3		\n\
+	Len=2		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x05		\"
+[ECUINFOITEM]		\n\
+	Name=应用标识版本		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F181		\n\
+	StartPos=5		\n\
+	Len=2		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x06		\"
+[ECUINFOITEM]		\n\
+	Name=应用标识零件号		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F181		\n\
+	StartPos=7		\n\
+	Len=3		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x07		\"
+[ECUINFOITEM]		\n\
+	Name=标定标识模块		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTOInReverseOrder		\n\
+	Cmd=22F182		\n\
+	StartPos=3		\n\
+	Len=2		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x08		\"
+[ECUINFOITEM]		\n\
+	Name=标定标识版本		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F182		\n\
+	StartPos=5		\n\
+	Len=2		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x09		\"
+[ECUINFOITEM]		\n\
+	Name=标定标识零件号		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F182		\n\
+	StartPos=7		\n\
+	Len=3		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x0A		\"
+[ECUINFOITEM]		\n\
+	Name=引导软件数字指纹[刷写设备ID]		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F183		\n\
+	StartPos=3		\n\
+	Len=24		\n\
+		\n"
+
+0x00,0x00,0x01,0x00,0x00,0x0B		\"
+[ECUINFOITEM]		\n\
+	Name=引导软件数字指纹[更新时间]		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTOTIME		\n\
+	Cmd=22F183		\n\
+	StartPos=27		\n\
+	Len=3		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x0C		\"
+[ECUINFOITEM]		\n\
+	Name=引导软件数字指纹[维修地点编号]		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F183		\n\
+	StartPos=30		\n\
+	Len=7		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x0D		\"
+[ECUINFOITEM]		\n\
+	Name=引导软件数字指纹[指纹编号]		\n\
+	Unit=		\n\
+	Expression="%d","x1;"		\n\
+	Cmd=22F183		\n\
+	StartPos=37		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x0E		\"
+[ECUINFOITEM]		\n\
+	Name=应用软件数字指纹[刷写设备ID]		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F184		\n\
+	StartPos=3		\n\
+	Len=24		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x0F		\"
+[ECUINFOITEM]		\n\
+	Name=应用软件数字指纹[更新时间]		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTOTIME		\n\
+	Cmd=22F184		\n\
+	StartPos=27		\n\
+	Len=3		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x10		\"
+[ECUINFOITEM]		\n\
+	Name=应用软件数字指纹[维修地点编号]		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F184		\n\
+	StartPos=30		\n\
+	Len=7		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x11		\"
+[ECUINFOITEM]		\n\
+	Name=应用数据数字指纹[刷写设备ID]		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F185		\n\
+	StartPos=3		\n\
+	Len=24		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x12		\"
+[ECUINFOITEM]		\n\
+	Name=应用数据数字指纹[更新时间]		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTOTIME		\n\
+	Cmd=22F185		\n\
+	StartPos=27		\n\
+	Len=3		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x13		\"
+[ECUINFOITEM]		\n\
+	Name=应用数据数字指纹[维修地点编号]		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F185		\n\
+	StartPos=30		\n\
+	Len=7		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x14		\"
+[ECUINFOITEM]		\n\
+	Name=ECU零件号		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F187		\n\
+	StartPos=3		\n\
+	Len=13		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x15		\"
+[ECUINFOITEM]		\n\
+	Name=供应商代码		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F18A		\n\
+	StartPos=3		\n\
+	Len=8		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x16		\"
+[ECUINFOITEM]		\n\
+	Name=ECU生产日期		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTONOTIME		\n\
+	Cmd=22F18B		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x17		\"
+[ECUINFOITEM]		\n\
+	Name=系列编号[系列号]		\n\
+	Unit=		\n\
+	Expression="%d","(x1*0x100+x2);"		\n\
+	Cmd=22F18C		\n\
+	StartPos=3		\n\
+	Len=2		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x18		\"
+[ECUINFOITEM]		\n\
+	Name=系列编号[产线编号]		\n\
+	Unit=		\n\
+	Expression="%d","(x1*0x100+x2);"		\n\
+	Cmd=22F18C		\n\
+	StartPos=5		\n\
+	Len=2		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x19		\"
+[ECUINFOITEM]		\n\
+	Name=系列编号[日期]		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTONOTIME		\n\
+	Cmd=22F18C		\n\
+	StartPos=7		\n\
+	Len=3		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x1A		\"
+[ECUINFOITEM]		\n\
+	Name=系列编号[流水号]		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2HEXSTR		\n\
+	Cmd=22F18C		\n\
+	StartPos=10		\n\
+	Len=5		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x1B		\"
+[ECUINFOITEM]		\n\
+	Name=车辆标识VIN		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2ASCII		\n\
+	Cmd=22F190		\n\
+	StartPos=3		\n\
+	Len=17		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x1C		\"
+[ECUINFOITEM]		\n\
+	Name=ECU硬件版本编号		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2HEXSTR_NEW2		\n\
+	Cmd=22F193		\n\
+	StartPos=3		\n\
+	Len=6		\n\
+		\"
+
+0x00,0x00,0x01,0x00,0x00,0x1D		\"
+[ECUINFOITEM]		\n\
+	Name=ECU软件版本编号		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2HEXSTR_NEW2		\n\
+	Cmd=22F195		\n\
+	StartPos=3		\n\
+	Len=6		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x01		\"
+[DSITEM]		\n\
+	Name=T15钥匙信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228800		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x02		\"
+[DSITEM]		\n\
+	Name=T50启动信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228801		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x03		\"
+[DSITEM]		\n\
+	Name=车下启动开关		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228802		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x04		\"
+[DSITEM]		\n\
+	Name=车下熄火开关		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228803		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x05		\"
+[DSITEM]		\n\
+	Name=加速踏板1电压值		\n\
+	Unit=V		\n\
+	Expression=CALC_HEXTODEC_LEN005		\n\
+	Cmd=228804		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x06		\"
+[DSITEM]		\n\
+	Name=辅助制动(+)档信号		\n\
+	Unit=		\n\
+	Expression="无挡位|1挡|2挡|3挡|4挡|5挡|6挡|7挡|8挡|9挡|10挡|未定义","if(x1==0) @0;else if(x1==1) @1;else if(x1==2) @2;else if(x1==3) @3;else if(x1==4) @4;else if(x1==5) @5;else if(x1==6) @6;else if(x1==7) @7;else if(x1==8) @8;else if(x1==9) @9;else if(x1==10) @10;else @11"		\n\
+	Cmd=228806		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x07		\"
+[DSITEM]		\n\
+	Name=辅助制动(-)档信号		\n\
+	Unit=		\n\
+	Expression="无挡位|1挡|2挡|3挡|4挡|5挡|6挡|7挡|8挡|9挡|10挡|未定义","if(x1==0) @0;else if(x1==1) @1;else if(x1==2) @2;else if(x1==3) @3;else if(x1==4) @4;else if(x1==5) @5;else if(x1==6) @6;else if(x1==7) @7;else if(x1==8) @8;else if(x1==9) @9;else if(x1==10) @10;else @11"		\n\
+	Cmd=228807		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x08		\"
+[DSITEM]		\n\
+	Name=辅助制动快速选择挡信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228808		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x09		\"
+[DSITEM]		\n\
+	Name=加速踏板2电压值		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTODEC_LEN005		\n\
+	Cmd=228805		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x0A		\"
+[DSITEM]		\n\
+	Name=加速踏板1位置		\n\
+	Unit=%		\n\
+	Expression=CALC_HEXTODEC_LEN04		\n\
+	Cmd=22883B		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x0B		\"
+[DSITEM]		\n\
+	Name=加速踏板2位置		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTODEC_LEN04		\n\
+	Cmd=22883D		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x0C		\"
+[DSITEM]		\n\
+	Name=制动踏板1电压值		\n\
+	Unit=V		\n\
+	Expression=CALC_HEXTODEC_LEN005		\n\
+	Cmd=228A32		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x0D		\"
+[DSITEM]		\n\
+	Name=制动踏板2电压值		\n\
+	Unit=V		\n\
+	Expression=CALC_HEXTODEC_LEN005		\n\
+	Cmd=228A33		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x0E		\"
+[DSITEM]		\n\
+	Name=制动踏板1位置		\n\
+	Unit=%		\n\
+	Expression=CALC_HEXTODEC_LEN04		\n\
+	Cmd=228A34		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x0F		\"
+[DSITEM]		\n\
+	Name=制动踏板2位置		\n\
+	Unit=%		\n\
+	Expression=CALC_HEXTODEC_LEN04		\n\
+	Cmd=228A35		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x10		\"
+[DSITEM]		\n\
+	Name=远程油门踏板1电压值		\n\
+	Unit=V		\n\
+	Expression=CALC_HEXTODEC_LEN005		\n\
+	Cmd=228868		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x11		\"
+[DSITEM]		\n\
+	Name=远程油门踏板2电压值		\n\
+	Unit=V		\n\
+	Expression=CALC_HEXTODEC_LEN005		\n\
+	Cmd=228869		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x12		\"
+[DSITEM]		\n\
+	Name=远程油门踏板1位置		\n\
+	Unit=%		\n\
+	Expression=CALC_HEXTODEC_LEN04		\n\
+	Cmd=228822		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x13		\"
+[DSITEM]		\n\
+	Name=远程油门踏板2位置		\n\
+	Unit=%		\n\
+	Expression=CALC_HEXTODEC_LEN04		\n\
+	Cmd=228A36		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x14		\"
+[DSITEM]		\n\
+	Name=远程油门切换开关信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228812		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x15		\"
+[DSITEM]		\n\
+	Name=制动信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22880C		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x16		\"
+[DSITEM]		\n\
+	Name=手制动信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228813		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x17		\"
+[DSITEM]		\n\
+	Name=冗余制动信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22880D		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x18		\"
+[DSITEM]		\n\
+	Name=AC空调请求信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22880F		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x19		\"
+[DSITEM]		\n\
+	Name=行车取力开关信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228810		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x1A		\"
+[DSITEM]		\n\
+	Name=停车取力开关信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228811		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x1B		\"
+[DSITEM]		\n\
+	Name=取力器反馈信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228815		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x1C		\"
+[DSITEM]		\n\
+	Name=取力器电磁阀		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228818		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x1D		\"
+[DSITEM]		\n\
+	Name=电磁风扇离合器1		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22881A		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x1E		\"
+[DSITEM]		\n\
+	Name=电磁风扇离合器2		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22881B		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x1F		\"
+[DSITEM]		\n\
+	Name=巡航控制激活开关		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22882C		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x20		\"
+[DSITEM]		\n\
+	Name=巡航控制减速开关		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228831		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x21		\"
+[DSITEM]		\n\
+	Name=巡航控制加速开关		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228833		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x22		\"
+[DSITEM]		\n\
+	Name=加速踏板低怠速开关		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228839		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x23		\"
+[DSITEM]		\n\
+	Name=加速踏板Kickdown开关		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22883A		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x24		\"
+[DSITEM]		\n\
+	Name=电机转速		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTODEC_LEN_32000		\n\
+	Cmd=228A19		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x25		\"
+[DSITEM]		\n\
+	Name=打气泵压力开关信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A37		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x26		\"
+[DSITEM]		\n\
+	Name=PTC暖风开关信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A38		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x27		\"
+[DSITEM]		\n\
+	Name=PTC接触器闭合状态反馈		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A39		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x28		\"
+[DSITEM]		\n\
+	Name=上装工作开关信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A3A		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x29		\"
+[DSITEM]		\n\
+	Name=FCV模式开关信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A3B		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x2A		\"
+[DSITEM]		\n\
+	Name=冷却水泵电源继电器反馈信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A3C		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x2B		\"
+[DSITEM]		\n\
+	Name=四合一主接触器闭合状态反馈信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A3D		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x2C		\"
+[DSITEM]		\n\
+	Name=四合一辅机接触器闭合状态反馈信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A3E		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x2D		\"
+[DSITEM]		\n\
+	Name=空调三态压力开关中压信号输入		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A40		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x2E		\"
+[DSITEM]		\n\
+	Name=充电桩唤醒信号A+		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A41		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x2F		\"
+[DSITEM]		\n\
+	Name=车下启动请求		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22881E		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x30		\"
+[DSITEM]		\n\
+	Name=车下熄火请求		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22881F		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x31		\"
+[DSITEM]		\n\
+	Name=限速控制激活状态		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228838		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x32		\"
+[DSITEM]		\n\
+	Name=巡航状态		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228829		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x33		\"
+[DSITEM]		\n\
+	Name=主制动开关状态		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22882E		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x34		\"
+[DSITEM]		\n\
+	Name=巡航控制使能开关		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=22882D		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x35		\"
+[DSITEM]		\n\
+	Name=倒挡开关状态信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228835		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x36		\"
+[DSITEM]		\n\
+	Name=风扇转速（控制）		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228841		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x37		\"
+[DSITEM]		\n\
+	Name=风扇驱动状态		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228842		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x38		\"
+[DSITEM]		\n\
+	Name=启动就绪信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228845		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x39		\"
+[DSITEM]		\n\
+	Name=启动熄火控制功能1		\n\
+	Unit=		\n\
+	Expression="禁用|启用","if(x1==0) @0;else @1"		\n\
+	Cmd=228848		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x3A		\"
+[DSITEM]		\n\
+	Name=启动熄火控制功能2		\n\
+	Unit=		\n\
+	Expression="禁用|启用","if(x1==0) @0;else @1"		\n\
+	Cmd=22884B		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x3B		\"
+[DSITEM]		\n\
+	Name=紧急启动功能		\n\
+	Unit=		\n\
+	Expression="禁用|启用","if(x1==0) @0;else @1"		\n\
+	Cmd=22884C		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x3C		\"
+[DSITEM]		\n\
+	Name=远程油门控制功能		\n\
+	Unit=		\n\
+	Expression="禁用|启用","if(x1==0) @0;else @1"		\n\
+	Cmd=22884F		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x3D		\"
+[DSITEM]		\n\
+	Name=外部扭矩需求控制功能		\n\
+	Unit=		\n\
+	Expression="禁用|激活","if(x1==0) @0;else @1"		\n\
+	Cmd=228850		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x3E		\"
+[DSITEM]		\n\
+	Name=转速控制功能		\n\
+	Unit=		\n\
+	Expression="禁用|激活","if(x1==0) @0;else @1"		\n\
+	Cmd=228853		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x3F		\"
+[DSITEM]		\n\
+	Name=转矩控制功能		\n\
+	Unit=		\n\
+	Expression="禁用|激活","if(x1==0) @0;else @1"		\n\
+	Cmd=228A42		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x40		\"
+[DSITEM]		\n\
+	Name=巡航车速配置		\n\
+	Unit=		\n\
+	Expression="无巡航|低速巡航|高速巡航|无效","if(x1==0) @0;else if(x1==0x01) @1;else if(x1==0x10) @2;else @3"		\n\
+	Cmd=228854		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x41		\"
+[DSITEM]		\n\
+	Name=驾驶需求多级车速限制功能		\n\
+	Unit=		\n\
+	Expression="禁用|激活","if(x1==0) @0;else @1"		\n\
+	Cmd=228856		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x42		\"
+[DSITEM]		\n\
+	Name=取力器配置		\n\
+	Unit=		\n\
+	Expression="无取力器配置|行车取力|驻车取力|无效","if(x1==0x00) @0;else if(x1==0x01) @1;else if(x1==0x10) @2;else @3"		\n\
+	Cmd=228A43		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x43		\"
+[DSITEM]		\n\
+	Name=远程锁车控制功能		\n\
+	Unit=		\n\
+	Expression="无锁车|无挡位|供方A锁车|无效","if(x1==0x00) @0;else if(x1==0x01) @1;else if(x1==0x10) @2;else @3"		\n\
+	Cmd=22884D		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x44		\"
+[DSITEM]		\n\
+	Name=四合一主回路接触器控制信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A44		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x45		\"
+[DSITEM]		\n\
+	Name=四合一辅机回路预充接触器控制信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A45		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x46		\"
+[DSITEM]		\n\
+	Name=四合一主回路预充接触器控制信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A46		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x47		\"
+[DSITEM]		\n\
+	Name=四合一辅机回路接触器控制信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A47		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x48		\"
+[DSITEM]		\n\
+	Name=冷却水泵电源继电器输出信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A48		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x49		\"
+[DSITEM]		\n\
+	Name=低压供电继电器控制		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A49		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x4A		\"
+[DSITEM]		\n\
+	Name=PTC低压继电器输出		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A4A		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x4B		\"
+[DSITEM]		\n\
+	Name=冷却风扇电源继电器输出信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A4B		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x4C		\"
+[DSITEM]		\n\
+	Name=倒车灯继电器信号输出		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A4C		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x4D		\"
+[DSITEM]		\n\
+	Name=制动灯继电器输出		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A4D		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x4E		\"
+[DSITEM]		\n\
+	Name=打气泵空压机风扇控制		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A4E		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x4F		\"
+[DSITEM]		\n\
+	Name=行走提示音关闭信号输出		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A50		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x50		\"
+[DSITEM]		\n\
+	Name=打气泵使能信号输出		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A51		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x51		\"
+[DSITEM]		\n\
+	Name=空调压缩机ON/OFF信号输出		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A52		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x52		\"
+[DSITEM]		\n\
+	Name=冷却水泵控制		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A2A		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x53		\"
+[DSITEM]		\n\
+	Name=冷却风扇控制器（PWM）		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTODEC_LEN04		\n\
+	Cmd=228A2B		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x54		\"
+[DSITEM]		\n\
+	Name=取力器增速开关+		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A2C		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x55		\"
+[DSITEM]		\n\
+	Name=取力器增速开关—		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A2D		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x56		\"
+[DSITEM]		\n\
+	Name=前进时最高车速		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTODEC_LEN000390625		\n\
+	Cmd=228B00		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x57		\"
+[DSITEM]		\n\
+	Name=PIN码		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2HEXSTR		\n\
+	Cmd=228B06		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x58		\"
+[DSITEM]		\n\
+	Name=VCU中锁车激活码		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2HEXSTR		\n\
+	Cmd=228B07		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x59		\"
+[DSITEM]		\n\
+	Name=固定密钥		\n\
+	Unit=		\n\
+	Expression=CALC_HEX2HEXSTR		\n\
+	Cmd=228B08		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x5A		\"
+[DSITEM]		\n\
+	Name=禁止加氢指示灯控制输出		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A2E		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x5B		\"
+[DSITEM]		\n\
+	Name=氢气浓度故障互锁复位信号		\n\
+	Unit=		\n\
+	Expression="未激活|激活|未配置","if(x1==0) @0;else if(x1==1) @1;else @2"		\n\
+	Cmd=228A2F		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x5C		\"
+[DSITEM]		\n\
+	Name=取力器作业车速/电动上装限制车速		\n\
+	Unit=		\n\
+	Expression=CALC_HEXTODEC_LEN000390625		\n\
+	Cmd=228B0E		\n\
+	StartPos=3		\n\
+	Len=4		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x5D		\"
+[DSITEM]		\n\
+	Name=车型		\n\
+	Unit=		\n\
+	Expression="自卸车|牵引车、载货车|环卫车|泵车|偏置码头车|其他","if(x1==0) @0;else if(x1==1) @1;else if(x1==2) @2;else if(x1==3) @3;else if(x1==4) @4;else @5"		\n\
+	Cmd=228A53		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x5E		\"
+[DSITEM]		\n\
+	Name=无人驾驶		\n\
+	Unit=		\n\
+	Expression="其他车辆|无人驾驶车辆|无效","if(x1==0x00) @0;else if(x1==0x01) @1;else @2"		\n\
+	Cmd=228A54		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x04,0x00,0x00,0x5F		\"
+[DSITEM]		\n\
+	Name=特殊需求		\n\
+	Unit=		\n\
+	Expression="无|英国偏码车|匹配陕汽自主上装|匹配自动驻车功能|无效","if(x1==0) @0;else if(x1==1) @1;else if(x1==2) @2;else if(x1==3) @3;else @4"		\n\
+	Cmd=228A55		\n\
+	StartPos=3		\n\
+	Len=1		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x01		\"
+[DTCLIB]		\n\
+	Org=D00C4A		\n\
+	Code=U100C4A		\n\
+	Desc=与DCDC丢失通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x02		\"
+[DTCLIB]		\n\
+	Org=D00C0E		\n\
+	Code=U100C0E		\n\
+	Desc=与绝缘监测仪失去通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x03		\"
+[DTCLIB]		\n\
+	Org=15000A		\n\
+	Code=P15000A		\n\
+	Desc=24V过压三级故障/电池电压原始值超过上限门槛		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x04		\"
+[DTCLIB]		\n\
+	Org=15004B		\n\
+	Code=P15004B		\n\
+	Desc=24V过压二级故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x05		\"
+[DTCLIB]		\n\
+	Org=15001C		\n\
+	Code=P15001C		\n\
+	Desc=24V欠压三级故障/电池电压原始值低于下限门槛		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x06		\"
+[DTCLIB]		\n\
+	Org=15004C		\n\
+	Code=P15004C		\n\
+	Desc=24V欠压二级故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x07		\"
+[DTCLIB]		\n\
+	Org=15000B		\n\
+	Code=P15000B		\n\
+	Desc=EEPROM 读错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x08		\"
+[DTCLIB]		\n\
+	Org=15004E		\n\
+	Code=P15004E		\n\
+	Desc=EEPROM 写错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x09		\"
+[DTCLIB]		\n\
+	Org=15004A		\n\
+	Code=P15004A		\n\
+	Desc=加速踏板与制动踏板信号互斥		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x0A		\"
+[DTCLIB]		\n\
+	Org=15003C		\n\
+	Code=P15003C		\n\
+	Desc=加速踏板1超出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x0B		\"
+[DTCLIB]		\n\
+	Org=15003D		\n\
+	Code=P15003D		\n\
+	Desc=加速踏板1超出下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x0C		\"
+[DTCLIB]		\n\
+	Org=15003E		\n\
+	Code=P15003E		\n\
+	Desc=加速踏板2超出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x0D		\"
+[DTCLIB]		\n\
+	Org=15003F		\n\
+	Code=P15003F		\n\
+	Desc=加速踏板2超出下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x0E		\"
+[DTCLIB]		\n\
+	Org=150002		\n\
+	Code=P150002		\n\
+	Desc=加速踏板信号1和信号2电压值2倍关系不可信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x0F		\"
+[DTCLIB]		\n\
+	Org=150093		\n\
+	Code=P150093		\n\
+	Desc=加速踏板采集故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x10		\"
+[DTCLIB]		\n\
+	Org=150033		\n\
+	Code=P150033		\n\
+	Desc=制动踏板1电压值高出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x11		\"
+[DTCLIB]		\n\
+	Org=150034		\n\
+	Code=P150034		\n\
+	Desc=制动踏板1电压值低于下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x12		\"
+[DTCLIB]		\n\
+	Org=150050		\n\
+	Code=P150050		\n\
+	Desc=制动踏板2电压值高出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x13		\"
+[DTCLIB]		\n\
+	Org=150051		\n\
+	Code=P150051		\n\
+	Desc=制动踏板2电压值低于下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x14		\"
+[DTCLIB]		\n\
+	Org=150052		\n\
+	Code=P150052		\n\
+	Desc=远程油门1信号不可信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x15		\"
+[DTCLIB]		\n\
+	Org=150053		\n\
+	Code=P150053		\n\
+	Desc=远程油门2信号不可信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x16		\"
+[DTCLIB]		\n\
+	Org=D00C18		\n\
+	Code=U100C18		\n\
+	Desc=VMS CAN-E Bus Off 故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x17		\"
+[DTCLIB]		\n\
+	Org=D00C21		\n\
+	Code=U100C21		\n\
+	Desc=VMS CAN-P Bus Off 故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x18		\"
+[DTCLIB]		\n\
+	Org=D00C09		\n\
+	Code=U100C09		\n\
+	Desc=与MCS失去通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x19		\"
+[DTCLIB]		\n\
+	Org=D00C08		\n\
+	Code=U100C08		\n\
+	Desc=与BMS失去通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x1A		\"
+[DTCLIB]		\n\
+	Org=D00C02		\n\
+	Code=U100C02		\n\
+	Desc=与TCU丢失通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x1B		\"
+[DTCLIB]		\n\
+	Org=D00C3F		\n\
+	Code=U100C3F		\n\
+	Desc=与EHBS丢失通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x1C		\"
+[DTCLIB]		\n\
+	Org=150054		\n\
+	Code=P150054		\n\
+	Desc=取力器(驱动)电磁阀输出开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x1D		\"
+[DTCLIB]		\n\
+	Org=150055		\n\
+	Code=P150055		\n\
+	Desc=取力器(驱动)电磁阀输出对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x1E		\"
+[DTCLIB]		\n\
+	Org=150056		\n\
+	Code=P150056		\n\
+	Desc=取力器(驱动)电磁阀输出对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x1F		\"
+[DTCLIB]		\n\
+	Org=15005A		\n\
+	Code=P15005A		\n\
+	Desc=PTC（电暖风）低压继电器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x20		\"
+[DTCLIB]		\n\
+	Org=15005B		\n\
+	Code=P15005B		\n\
+	Desc=PTC（电暖风）低压继电器对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x21		\"
+[DTCLIB]		\n\
+	Org=15005C		\n\
+	Code=P15005C		\n\
+	Desc=PTC（电暖风）低压继电器对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x22		\"
+[DTCLIB]		\n\
+	Org=15005D		\n\
+	Code=P15005D		\n\
+	Desc=冷却水泵低压继电器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x23		\"
+[DTCLIB]		\n\
+	Org=15005E		\n\
+	Code=P15005E		\n\
+	Desc=冷却水泵低压继电器对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x24		\"
+[DTCLIB]		\n\
+	Org=15005F		\n\
+	Code=P15005F		\n\
+	Desc=冷却水泵低压继电器对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x25		\"
+[DTCLIB]		\n\
+	Org=150063		\n\
+	Code=P150063		\n\
+	Desc=低压供电继电器控制（多合一/MCS/IU）开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x26		\"
+[DTCLIB]		\n\
+	Org=150064		\n\
+	Code=P150064		\n\
+	Desc=低压供电继电器控制（多合一/MCS/IU）对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x27		\"
+[DTCLIB]		\n\
+	Org=150065		\n\
+	Code=P150065		\n\
+	Desc=低压供电继电器控制（多合一/MCS/IU）对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x28		\"
+[DTCLIB]		\n\
+	Org=150066		\n\
+	Code=P150066		\n\
+	Desc=倒车灯继电器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x29		\"
+[DTCLIB]		\n\
+	Org=150067		\n\
+	Code=P150067		\n\
+	Desc=倒车灯继电器对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x2A		\"
+[DTCLIB]		\n\
+	Org=150068		\n\
+	Code=P150068		\n\
+	Desc=倒车灯继电器对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x2B		\"
+[DTCLIB]		\n\
+	Org=150069		\n\
+	Code=P150069		\n\
+	Desc=制动灯继电器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x2C		\"
+[DTCLIB]		\n\
+	Org=15006A		\n\
+	Code=P15006A		\n\
+	Desc=制动灯继电器对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x2D		\"
+[DTCLIB]		\n\
+	Org=15006B		\n\
+	Code=P15006B		\n\
+	Desc=制动灯继电器对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x2E		\"
+[DTCLIB]		\n\
+	Org=15006C		\n\
+	Code=P15006C		\n\
+	Desc=打气泵空压机风扇继电器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x2F		\"
+[DTCLIB]		\n\
+	Org=15006E		\n\
+	Code=P15006E		\n\
+	Desc=打气泵空压机风扇继电器对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x30		\"
+[DTCLIB]		\n\
+	Org=15006F		\n\
+	Code=P15006F		\n\
+	Desc=打气泵空压机风扇继电器对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x31		\"
+[DTCLIB]		\n\
+	Org=150073		\n\
+	Code=P150073		\n\
+	Desc=行走提示音关闭信号继电器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x32		\"
+[DTCLIB]		\n\
+	Org=150074		\n\
+	Code=P150074		\n\
+	Desc=行走提示音关闭信号继电器对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x33		\"
+[DTCLIB]		\n\
+	Org=150075		\n\
+	Code=P150075		\n\
+	Desc=行走提示音关闭信号继电器对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x34		\"
+[DTCLIB]		\n\
+	Org=150076		\n\
+	Code=P150076		\n\
+	Desc=打气泵使能信号开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x35		\"
+[DTCLIB]		\n\
+	Org=150077		\n\
+	Code=P150077		\n\
+	Desc=打气泵使能信号对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x36		\"
+[DTCLIB]		\n\
+	Org=150078		\n\
+	Code=P150078		\n\
+	Desc=打气泵使能信号对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x37		\"
+[DTCLIB]		\n\
+	Org=150079		\n\
+	Code=P150079		\n\
+	Desc=空调压缩机ON/OFF信号开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x38		\"
+[DTCLIB]		\n\
+	Org=15007A		\n\
+	Code=P15007A		\n\
+	Desc=空调压缩机ON/OFF信号对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x39		\"
+[DTCLIB]		\n\
+	Org=15007B		\n\
+	Code=P15007B		\n\
+	Desc=空调压缩机ON/OFF信号对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x3A		\"
+[DTCLIB]		\n\
+	Org=150043		\n\
+	Code=P150043		\n\
+	Desc=电机冷却出口温度传感器电压超出上限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x3B		\"
+[DTCLIB]		\n\
+	Org=150044		\n\
+	Code=P150044		\n\
+	Desc=电机冷却出口温度传感器电压超出下限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x3C		\"
+[DTCLIB]		\n\
+	Org=150045		\n\
+	Code=P150045		\n\
+	Desc=电机冷却入口温度传感器电压超出上限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x3D		\"
+[DTCLIB]		\n\
+	Org=150046		\n\
+	Code=P150046		\n\
+	Desc=电机冷却入口温度传感器电压超出下限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x3E		\"
+[DTCLIB]		\n\
+	Org=15007C		\n\
+	Code=P15007C		\n\
+	Desc=制动气压不足故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x3F		\"
+[DTCLIB]		\n\
+	Org=15007D		\n\
+	Code=P15007D		\n\
+	Desc=冷却水泵控制输出开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x40		\"
+[DTCLIB]		\n\
+	Org=15007E		\n\
+	Code=P15007E		\n\
+	Desc=冷却水泵控制输出对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x41		\"
+[DTCLIB]		\n\
+	Org=15007F		\n\
+	Code=P15007F		\n\
+	Desc=冷却水泵控制输出对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x42		\"
+[DTCLIB]		\n\
+	Org=150080		\n\
+	Code=P150080		\n\
+	Desc=冷却风扇控制输出开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x43		\"
+[DTCLIB]		\n\
+	Org=150081		\n\
+	Code=P150081		\n\
+	Desc=冷却风扇控制输出对地短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x44		\"
+[DTCLIB]		\n\
+	Org=150082		\n\
+	Code=P150082		\n\
+	Desc=冷却风扇控制输出对电源短路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x45		\"
+[DTCLIB]		\n\
+	Org=150083		\n\
+	Code=P150083		\n\
+	Desc=四合一主回路接触器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x46		\"
+[DTCLIB]		\n\
+	Org=150084		\n\
+	Code=P150084		\n\
+	Desc=四合一主回路接触器粘连		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x47		\"
+[DTCLIB]		\n\
+	Org=150085		\n\
+	Code=P150085		\n\
+	Desc=四合一辅机接触器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x48		\"
+[DTCLIB]		\n\
+	Org=150086		\n\
+	Code=P150086		\n\
+	Desc=四合一辅机接触器粘连		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x49		\"
+[DTCLIB]		\n\
+	Org=150089		\n\
+	Code=P150089		\n\
+	Desc=四合一主驱回路预充电接触器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x4A		\"
+[DTCLIB]		\n\
+	Org=15008A		\n\
+	Code=P15008A		\n\
+	Desc=四合一主驱回路预充电接触器粘连故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x4B		\"
+[DTCLIB]		\n\
+	Org=15008B		\n\
+	Code=P15008B		\n\
+	Desc=四合一辅机回路预充电接触器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x4C		\"
+[DTCLIB]		\n\
+	Org=15008C		\n\
+	Code=P15008C		\n\
+	Desc=四合一辅机回路预充电接触器粘连故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x4D		\"
+[DTCLIB]		\n\
+	Org=15008D		\n\
+	Code=P15008D		\n\
+	Desc=主驱回路预充失败故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x4E		\"
+[DTCLIB]		\n\
+	Org=15008E		\n\
+	Code=P15008E		\n\
+	Desc=辅机回路预充故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x4F		\"
+[DTCLIB]		\n\
+	Org=150094		\n\
+	Code=P150094		\n\
+	Desc=制动踏板初始位置学习故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x50		\"
+[DTCLIB]		\n\
+	Org=15008F		\n\
+	Code=P15008F		\n\
+	Desc=高压下电超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x51		\"
+[DTCLIB]		\n\
+	Org=150090		\n\
+	Code=P150090		\n\
+	Desc=电机主动放电超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x52		\"
+[DTCLIB]		\n\
+	Org=150087		\n\
+	Code=P150087		\n\
+	Desc=PTC（电暖风）接触器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x53		\"
+[DTCLIB]		\n\
+	Org=150088		\n\
+	Code=P150088		\n\
+	Desc=PTC（电暖风）接触器粘连故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x54		\"
+[DTCLIB]		\n\
+	Org=150091		\n\
+	Code=P150091		\n\
+	Desc=天行健终端握手失败，禁止上高压提示		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x55		\"
+[DTCLIB]		\n\
+	Org=150092		\n\
+	Code=P150092		\n\
+	Desc=终端校验失败，进入限速模式		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x56		\"
+[DTCLIB]		\n\
+	Org=D00C46		\n\
+	Code=U100C46		\n\
+	Desc=与FCE（燃料电池控制器）丢失通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x57		\"
+[DTCLIB]		\n\
+	Org=D00C47		\n\
+	Code=U100C47		\n\
+	Desc=与EHDS（助力转向）丢失通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x58		\"
+[DTCLIB]		\n\
+	Org=D00C4B		\n\
+	Code=U100C4B		\n\
+	Desc=与仪表失去通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x59		\"
+[DTCLIB]		\n\
+	Org=D00C4C		\n\
+	Code=U100C4C		\n\
+	Desc=与ABS丢失通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x5A		\"
+[DTCLIB]		\n\
+	Org=D00C8B		\n\
+	Code=U100C8B		\n\
+	Desc=与PDU丢失通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x5B		\"
+[DTCLIB]		\n\
+	Org=D00C8C		\n\
+	Code=U100C8C		\n\
+	Desc=与BBM丢失通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x5C		\"
+[DTCLIB]		\n\
+	Org=D00C34		\n\
+	Code=U100C34		\n\
+	Desc=EEC2报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x5D		\"
+[DTCLIB]		\n\
+	Org=150030		\n\
+	Code=P150030		\n\
+	Desc=启动继电器对电源短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x5E		\"
+[DTCLIB]		\n\
+	Org=150031		\n\
+	Code=P150031		\n\
+	Desc=启动继电器对地短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x5F		\"
+[DTCLIB]		\n\
+	Org=150032		\n\
+	Code=P150032		\n\
+	Desc=启动继电器开路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x60		\"
+[DTCLIB]		\n\
+	Org=910407		\n\
+	Code=B110407		\n\
+	Desc=Keyin下TXJ认证请求超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x61		\"
+[DTCLIB]		\n\
+	Org=910408		\n\
+	Code=B110408		\n\
+	Desc=Keyin下TXJ发送Key超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x62		\"
+[DTCLIB]		\n\
+	Org=910409		\n\
+	Code=B110409		\n\
+	Desc=Keyin下TXJ发送Key错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x63		\"
+[DTCLIB]		\n\
+	Org=91040A		\n\
+	Code=B11040A		\n\
+	Desc=ON档下TXJ未发送握手校验命令		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x64		\"
+[DTCLIB]		\n\
+	Org=91040B		\n\
+	Code=B11040B		\n\
+	Desc=ON档下TXJ发送key超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x65		\"
+[DTCLIB]		\n\
+	Org=91040C		\n\
+	Code=B11040C		\n\
+	Desc=ON档下TXJ发送Key错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x66		\"
+[DTCLIB]		\n\
+	Org=910412		\n\
+	Code=B110412		\n\
+	Desc=Keyin下IMMO/PSU/PEPS认证请求超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x67		\"
+[DTCLIB]		\n\
+	Org=910410		\n\
+	Code=B110410		\n\
+	Desc=Keyin下IMMO/PSU/PEPS发送Key超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x68		\"
+[DTCLIB]		\n\
+	Org=910411		\n\
+	Code=B110411		\n\
+	Desc=Keyin下IMMO/PSU/PEPS发送Key错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x69		\"
+[DTCLIB]		\n\
+	Org=15000B		\n\
+	Code=P15000B		\n\
+	Desc=EEPROM读错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x6A		\"
+[DTCLIB]		\n\
+	Org=15000C		\n\
+	Code=P15000C		\n\
+	Desc=EEPROM写错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x6B		\"
+[DTCLIB]		\n\
+	Org=D00C02		\n\
+	Code=U100C02		\n\
+	Desc=与TCU失去通信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x6C		\"
+[DTCLIB]		\n\
+	Org=D00C04		\n\
+	Code=U100C04		\n\
+	Desc=与EMS失去通信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x6D		\"
+[DTCLIB]		\n\
+	Org=150005		\n\
+	Code=P150005		\n\
+	Desc=油门与刹车同时踩下故障(待定)		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x6E		\"
+[DTCLIB]		\n\
+	Org=150038		\n\
+	Code=P150038		\n\
+	Desc=刹车信号不可信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x6F		\"
+[DTCLIB]		\n\
+	Org=15003A		\n\
+	Code=P15003A		\n\
+	Desc=发动机转速超上限故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x70		\"
+[DTCLIB]		\n\
+	Org=150007		\n\
+	Code=P150007		\n\
+	Desc=车下启动按钮卡住		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x71		\"
+[DTCLIB]		\n\
+	Org=150008		\n\
+	Code=P150008		\n\
+	Desc=冷却风扇速度高出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x72		\"
+[DTCLIB]		\n\
+	Org=150009		\n\
+	Code=P150009		\n\
+	Desc=冷却风扇速度低于下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x73		\"
+[DTCLIB]		\n\
+	Org=15000D		\n\
+	Code=P15000D		\n\
+	Desc=多态开关电压超上限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x74		\"
+[DTCLIB]		\n\
+	Org=15000E		\n\
+	Code=P15000E		\n\
+	Desc=多态开关电压超下限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x75		\"
+[DTCLIB]		\n\
+	Org=15000F		\n\
+	Code=P15000F		\n\
+	Desc=多态开关信号不可信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x76		\"
+[DTCLIB]		\n\
+	Org=150010		\n\
+	Code=P150010		\n\
+	Desc=冷却风扇传感器电源电压超出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x77		\"
+[DTCLIB]		\n\
+	Org=150011		\n\
+	Code=P150011		\n\
+	Desc=冷却风扇传感器电源电压低于下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x78		\"
+[DTCLIB]		\n\
+	Org=150012		\n\
+	Code=P150012		\n\
+	Desc=T50按下时间过长		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x79		\"
+[DTCLIB]		\n\
+	Org=150013		\n\
+	Code=P150013		\n\
+	Desc=远程油门踏板1输出电压值超出上限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x7A		\"
+[DTCLIB]		\n\
+	Org=150014		\n\
+	Code=P150014		\n\
+	Desc=远程油门踏板1输出电压值低于下限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x7B		\"
+[DTCLIB]		\n\
+	Org=150015		\n\
+	Code=P150015		\n\
+	Desc=远程油门踏板2输出电压值超出上限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x7C		\"
+[DTCLIB]		\n\
+	Org=150016		\n\
+	Code=P150016		\n\
+	Desc=远程油门踏板2输出电压值低于下限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x7D		\"
+[DTCLIB]		\n\
+	Org=150017		\n\
+	Code=P150017		\n\
+	Desc=远程油门踏板1和油门踏板2的两倍关系不可信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x7E		\"
+[DTCLIB]		\n\
+	Org=150018		\n\
+	Code=P150018		\n\
+	Desc=执行限制转速锁车模式		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x7F		\"
+[DTCLIB]		\n\
+	Org=150019		\n\
+	Code=P150019		\n\
+	Desc=执行限制启动锁车模式		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x80		\"
+[DTCLIB]		\n\
+	Org=15001A		\n\
+	Code=P15001A		\n\
+	Desc=远程油门与刹车可信性校验（待定）		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x81		\"
+[DTCLIB]		\n\
+	Org=15001B		\n\
+	Code=P15001B		\n\
+	Desc=巡航信号不可靠		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x82		\"
+[DTCLIB]		\n\
+	Org=15001D		\n\
+	Code=P15001D		\n\
+	Desc=排气制动电磁阀电源短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x83		\"
+[DTCLIB]		\n\
+	Org=15001E		\n\
+	Code=P15001E		\n\
+	Desc=排气制动电磁阀开路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x84		\"
+[DTCLIB]		\n\
+	Org=15001F		\n\
+	Code=P15001F		\n\
+	Desc=排气制动电磁阀对地短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x85		\"
+[DTCLIB]		\n\
+	Org=150020		\n\
+	Code=P150020		\n\
+	Desc=风扇离合器1与电源短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x86		\"
+[DTCLIB]		\n\
+	Org=150021		\n\
+	Code=P150021		\n\
+	Desc=风扇离合器1开路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x87		\"
+[DTCLIB]		\n\
+	Org=150022		\n\
+	Code=P150022		\n\
+	Desc=风扇离合器1与地短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x88		\"
+[DTCLIB]		\n\
+	Org=150023		\n\
+	Code=P150023		\n\
+	Desc=风扇离合器2电源短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x89		\"
+[DTCLIB]		\n\
+	Org=150024		\n\
+	Code=P150024		\n\
+	Desc=风扇离合器2开路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x8A		\"
+[DTCLIB]		\n\
+	Org=150025		\n\
+	Code=P150025		\n\
+	Desc=风扇离合器2对地短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x8B		\"
+[DTCLIB]		\n\
+	Org=150026		\n\
+	Code=P150026		\n\
+	Desc=取力器空挡电磁阀对电源短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x8C		\"
+[DTCLIB]		\n\
+	Org=150027		\n\
+	Code=P150027		\n\
+	Desc=取力器空挡电磁阀开路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x8D		\"
+[DTCLIB]		\n\
+	Org=150028		\n\
+	Code=P150028		\n\
+	Desc=取力器空挡电磁阀对地短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x8E		\"
+[DTCLIB]		\n\
+	Org=150029		\n\
+	Code=P150029		\n\
+	Desc=取力器电磁阀对电源短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x8F		\"
+[DTCLIB]		\n\
+	Org=15002A		\n\
+	Code=P15002A		\n\
+	Desc=取力器电磁阀开路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x90		\"
+[DTCLIB]		\n\
+	Org=15002B		\n\
+	Code=P15002B		\n\
+	Desc=取力器电磁阀对地短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x91		\"
+[DTCLIB]		\n\
+	Org=150033		\n\
+	Code=P150033		\n\
+	Desc=刹车传感器电压超过上限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x92		\"
+[DTCLIB]		\n\
+	Org=150034		\n\
+	Code=P150034		\n\
+	Desc=刹车传感器电压低于下限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x93		\"
+[DTCLIB]		\n\
+	Org=15003B		\n\
+	Code=P15003B		\n\
+	Desc=进气温度超过上限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x94		\"
+[DTCLIB]		\n\
+	Org=15003C		\n\
+	Code=P15003C		\n\
+	Desc=油门踏板1及远程油门踏板1传感器5V电源供电电压超出上限门槛值/加速踏板1超出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x95		\"
+[DTCLIB]		\n\
+	Org=15003D		\n\
+	Code=P15003D		\n\
+	Desc=油门踏板1及远程油门踏板1传感器5V电源供电电压低于下限门槛值/加速踏板1超出下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x96		\"
+[DTCLIB]		\n\
+	Org=15003E		\n\
+	Code=P15003E		\n\
+	Desc=油门踏板2及远程油门踏板2传感器5V电源供电电压超出上限门槛值/加速踏板2超出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x97		\"
+[DTCLIB]		\n\
+	Org=15003F		\n\
+	Code=P15003F		\n\
+	Desc=油门踏板2及远程油门踏板2传感器5V电源供电电压低于下限门槛值/加速踏板2超出下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x98		\"
+[DTCLIB]		\n\
+	Org=150040		\n\
+	Code=P150040		\n\
+	Desc=风扇传感器5V电源供电电压超出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x99		\"
+[DTCLIB]		\n\
+	Org=150041		\n\
+	Code=P150041		\n\
+	Desc=风扇传感器5V电源供电电压低于下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x9A		\"
+[DTCLIB]		\n\
+	Org=15000A		\n\
+	Code=P15000A		\n\
+	Desc=电池电压原始值超过上限门槛/24V过压三级故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x9B		\"
+[DTCLIB]		\n\
+	Org=15001C		\n\
+	Code=P15001C		\n\
+	Desc=电池电压原始值低于下限门槛/24V欠压三级故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x9C		\"
+[DTCLIB]		\n\
+	Org=150035		\n\
+	Code=P150035		\n\
+	Desc=24V输出公共电源1对地短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x9D		\"
+[DTCLIB]		\n\
+	Org=150036		\n\
+	Code=P150036		\n\
+	Desc=24V输出公共电源1对电源短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x9E		\"
+[DTCLIB]		\n\
+	Org=150037		\n\
+	Code=P150037		\n\
+	Desc=24V输出公共电源2对地短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0x9F		\"
+[DTCLIB]		\n\
+	Org=150042		\n\
+	Code=P150042		\n\
+	Desc=24V输出公共电源2对电源短路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xA0		\"
+[DTCLIB]		\n\
+	Org=D00C01		\n\
+	Code=U100C01		\n\
+	Desc=VCULimphome故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xA1		\"
+[DTCLIB]		\n\
+	Org=D00C02		\n\
+	Code=U100C02		\n\
+	Desc=与TCU失去通信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xA2		\"
+[DTCLIB]		\n\
+	Org=D00C03		\n\
+	Code=U100C03		\n\
+	Desc=与ABS失去通信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xA3		\"
+[DTCLIB]		\n\
+	Org=D00C04		\n\
+	Code=U100C04		\n\
+	Desc=与EMS失去通信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xA4		\"
+[DTCLIB]		\n\
+	Org=D00C05		\n\
+	Code=U100C05		\n\
+	Desc=与IMMO认证失败		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xA5		\"
+[DTCLIB]		\n\
+	Org=D00C06		\n\
+	Code=U100C06		\n\
+	Desc=与PSU认证失败		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xA6		\"
+[DTCLIB]		\n\
+	Org=D00C07		\n\
+	Code=U100C07		\n\
+	Desc=与GW失去通信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xA7		\"
+[DTCLIB]		\n\
+	Org=D00C0F		\n\
+	Code=U100C0F		\n\
+	Desc=接收报文TCO1中车速值超过上限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xA8		\"
+[DTCLIB]		\n\
+	Org=D00C11		\n\
+	Code=U100C11		\n\
+	Desc=接收报文EBC1中刹车信号不可信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xA9		\"
+[DTCLIB]		\n\
+	Org=D00C12		\n\
+	Code=U100C12		\n\
+	Desc=接收报文ET中水温值超过上限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xAA		\"
+[DTCLIB]		\n\
+	Org=D00C13		\n\
+	Code=U100C13		\n\
+	Desc=接收智能终端的key报文和VCU计算的key比对不一致故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xAB		\"
+[DTCLIB]		\n\
+	Org=D00C14		\n\
+	Code=U100C14		\n\
+	Desc=Switch2（0x18FFC325）报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xAC		\"
+[DTCLIB]		\n\
+	Org=D00C15		\n\
+	Code=U100C15		\n\
+	Desc=TCO1报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xAD		\"
+[DTCLIB]		\n\
+	Org=D00C17		\n\
+	Code=U100C17		\n\
+	Desc=ETC7报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xAE		\"
+[DTCLIB]		\n\
+	Org=D00C19		\n\
+	Code=U100C19		\n\
+	Desc=ET报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xAF		\"
+[DTCLIB]		\n\
+	Org=D00C1A		\n\
+	Code=U100C1A		\n\
+	Desc=TSC1AE报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xB0		\"
+[DTCLIB]		\n\
+	Org=D00C1B		\n\
+	Code=U100C1B		\n\
+	Desc=TSC1AR报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xB1		\"
+[DTCLIB]		\n\
+	Org=D00C1C		\n\
+	Code=U100C1C		\n\
+	Desc=TSC1DE报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xB2		\"
+[DTCLIB]		\n\
+	Org=D00C1D		\n\
+	Code=U100C1D		\n\
+	Desc=TSC1DR报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xB3		\"
+[DTCLIB]		\n\
+	Org=D00C1E		\n\
+	Code=U100C1E		\n\
+	Desc=TSC1PE报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xB4		\"
+[DTCLIB]		\n\
+	Org=D00C1F		\n\
+	Code=U100C1F		\n\
+	Desc=TSC1TE报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xB5		\"
+[DTCLIB]		\n\
+	Org=D00C20		\n\
+	Code=U100C20		\n\
+	Desc=TSC1TR报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xB6		\"
+[DTCLIB]		\n\
+	Org=D00C22		\n\
+	Code=U100C22		\n\
+	Desc=TSC1AEBS报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xB7		\"
+[DTCLIB]		\n\
+	Org=D00C23		\n\
+	Code=U100C23		\n\
+	Desc=TSC1AE报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xB8		\"
+[DTCLIB]		\n\
+	Org=D00C24		\n\
+	Code=U100C24		\n\
+	Desc=TSC1AR报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xB9		\"
+[DTCLIB]		\n\
+	Org=D00C25		\n\
+	Code=U100C25		\n\
+	Desc=TSC1DE报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xBA		\"
+[DTCLIB]		\n\
+	Org=D00C26		\n\
+	Code=U100C26		\n\
+	Desc=TSC1DR报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xBB		\"
+[DTCLIB]		\n\
+	Org=D00C27		\n\
+	Code=U100C27		\n\
+	Desc=TSC1PE报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xBC		\"
+[DTCLIB]		\n\
+	Org=D00C28		\n\
+	Code=U100C28		\n\
+	Desc=TSC1TE报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xBD		\"
+[DTCLIB]		\n\
+	Org=D00C29		\n\
+	Code=U100C29		\n\
+	Desc=TSC1TR报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xBE		\"
+[DTCLIB]		\n\
+	Org=D00C2B		\n\
+	Code=U100C2B		\n\
+	Desc=TSC1AEBS报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xBF		\"
+[DTCLIB]		\n\
+	Org=D00C2C		\n\
+	Code=U100C2C		\n\
+	Desc=ETC2报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xC0		\"
+[DTCLIB]		\n\
+	Org=D00C2D		\n\
+	Code=U100C2D		\n\
+	Desc=与IMMO失去通信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xC1		\"
+[DTCLIB]		\n\
+	Org=D00C2E		\n\
+	Code=U100C2E		\n\
+	Desc=与PSU失去通信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xC2		\"
+[DTCLIB]		\n\
+	Org=D00C2F		\n\
+	Code=U100C2F		\n\
+	Desc=TSC1VE报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xC3		\"
+[DTCLIB]		\n\
+	Org=D00C30		\n\
+	Code=U100C30		\n\
+	Desc=TSC1VE报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xC4		\"
+[DTCLIB]		\n\
+	Org=D00C31		\n\
+	Code=U100C31		\n\
+	Desc=ETC1报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xC5		\"
+[DTCLIB]		\n\
+	Org=D00C32		\n\
+	Code=U100C32		\n\
+	Desc=ETC1报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xC6		\"
+[DTCLIB]		\n\
+	Org=D00C33		\n\
+	Code=U100C33		\n\
+	Desc=EEC2报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xC7		\"
+[DTCLIB]		\n\
+	Org=D00C34		\n\
+	Code=U100C34		\n\
+	Desc=EEC2报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xC8		\"
+[DTCLIB]		\n\
+	Org=D00C35		\n\
+	Code=U100C35		\n\
+	Desc=EEC3报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xC9		\"
+[DTCLIB]		\n\
+	Org=D00C36		\n\
+	Code=U100C36		\n\
+	Desc=EEC3报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xCA		\"
+[DTCLIB]		\n\
+	Org=D00C37		\n\
+	Code=U100C37		\n\
+	Desc=TSC1ACCE报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xCB		\"
+[DTCLIB]		\n\
+	Org=D00C38		\n\
+	Code=U100C38		\n\
+	Desc=TSC1ACCE报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xCC		\"
+[DTCLIB]		\n\
+	Org=D00C3A		\n\
+	Code=U100C3A		\n\
+	Desc=TSC1ACCR报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xCD		\"
+[DTCLIB]		\n\
+	Org=D00C3B		\n\
+	Code=U100C3B		\n\
+	Desc=TSC1_EXR_RE报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xCE		\"
+[DTCLIB]		\n\
+	Org=D00C3C		\n\
+	Code=U100C3C		\n\
+	Desc=TSC1_EXR_RE报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xCF		\"
+[DTCLIB]		\n\
+	Org=D00C3D		\n\
+	Code=U100C3D		\n\
+	Desc=TSC1_ER_ACC报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xD0		\"
+[DTCLIB]		\n\
+	Org=D00C3E		\n\
+	Code=U100C3E		\n\
+	Desc=TSC1_ER_ACC报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xD1		\"
+[DTCLIB]		\n\
+	Org=D00C41		\n\
+	Code=U100C41		\n\
+	Desc=TCO1报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xD2		\"
+[DTCLIB]		\n\
+	Org=D00C42		\n\
+	Code=U100C42		\n\
+	Desc=MFD1报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xD3		\"
+[DTCLIB]		\n\
+	Org=D00C43		\n\
+	Code=U100C43		\n\
+	Desc=MFD1报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xD4		\"
+[DTCLIB]		\n\
+	Org=D00C44		\n\
+	Code=U100C44		\n\
+	Desc=ERC1报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xD5		\"
+[DTCLIB]		\n\
+	Org=D00C45		\n\
+	Code=U100C45		\n\
+	Desc=ERC1报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xD6		\"
+[DTCLIB]		\n\
+	Org=D00C48		\n\
+	Code=U100C48		\n\
+	Desc=EBC1_ABS报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xD7		\"
+[DTCLIB]		\n\
+	Org=D00C49		\n\
+	Code=U100C49		\n\
+	Desc=IMMO1报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xD8		\"
+[DTCLIB]		\n\
+	Org=D00C4D		\n\
+	Code=U100C4D		\n\
+	Desc=ET报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xD9		\"
+[DTCLIB]		\n\
+	Org=D00C4E		\n\
+	Code=U100C4E		\n\
+	Desc=INCON报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xDA		\"
+[DTCLIB]		\n\
+	Org=D00C4F		\n\
+	Code=U100C4F		\n\
+	Desc=INCON报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xDB		\"
+[DTCLIB]		\n\
+	Org=D00C50		\n\
+	Code=U100C50		\n\
+	Desc=AmbtCd报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xDC		\"
+[DTCLIB]		\n\
+	Org=D00C51		\n\
+	Code=U100C51		\n\
+	Desc=AmbtCd报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xDD		\"
+[DTCLIB]		\n\
+	Org=D00C52		\n\
+	Code=U100C52		\n\
+	Desc=AC1报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xDE		\"
+[DTCLIB]		\n\
+	Org=D00C53		\n\
+	Code=U100C53		\n\
+	Desc=AC1报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xDF		\"
+[DTCLIB]		\n\
+	Org=D00C54		\n\
+	Code=U100C54		\n\
+	Desc=Switch2报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xE0		\"
+[DTCLIB]		\n\
+	Org=D00C56		\n\
+	Code=U100C56		\n\
+	Desc=TSC1TXJ报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xE1		\"
+[DTCLIB]		\n\
+	Org=D00C57		\n\
+	Code=U100C57		\n\
+	Desc=TSC1TXJ报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xE2		\"
+[DTCLIB]		\n\
+	Org=D00C58		\n\
+	Code=U100C58		\n\
+	Desc=ETC7报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xE3		\"
+[DTCLIB]		\n\
+	Org=D00C5C		\n\
+	Code=U100C5C		\n\
+	Desc=ACC1报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xE4		\"
+[DTCLIB]		\n\
+	Org=D00C5D		\n\
+	Code=U100C5D		\n\
+	Desc=ACC1报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xE5		\"
+[DTCLIB]		\n\
+	Org=D00C5E		\n\
+	Code=U100C5E		\n\
+	Desc=ACC2报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xE6		\"
+[DTCLIB]		\n\
+	Org=D00C5F		\n\
+	Code=U100C5F		\n\
+	Desc=ACC2报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xE7		\"
+[DTCLIB]		\n\
+	Org=D00C60		\n\
+	Code=U100C60		\n\
+	Desc=AEBS1报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xE8		\"
+[DTCLIB]		\n\
+	Org=D00C61		\n\
+	Code=U100C61		\n\
+	Desc=AEBS1报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xE9		\"
+[DTCLIB]		\n\
+	Org=D00C62		\n\
+	Code=U100C62		\n\
+	Desc=来自ACC的CCVS2报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xEA		\"
+[DTCLIB]		\n\
+	Org=D00C63		\n\
+	Code=U100C63		\n\
+	Desc=来自ACC的CCVS2报文接收超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xEB		\"
+[DTCLIB]		\n\
+	Org=D00C69		\n\
+	Code=U100C69		\n\
+	Desc=TSC1_EXR_0B报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xEC		\"
+[DTCLIB]		\n\
+	Org=D00C6A		\n\
+	Code=U100C6A		\n\
+	Desc=TSC1_EXR_0B报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xED		\"
+[DTCLIB]		\n\
+	Org=D00C6B		\n\
+	Code=U100C6B		\n\
+	Desc=TSC1_EXR_RE报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xEE		\"
+[DTCLIB]		\n\
+	Org=D00C6C		\n\
+	Code=U100C6C		\n\
+	Desc=TSC1_EXR_RE报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xEF		\"
+[DTCLIB]		\n\
+	Org=D00C6D		\n\
+	Code=U100C6D		\n\
+	Desc=TSC1_TE报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xF0		\"
+[DTCLIB]		\n\
+	Org=D00C6E		\n\
+	Code=U100C6E		\n\
+	Desc=TSC1_TE报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xF1		\"
+[DTCLIB]		\n\
+	Org=D00C6F		\n\
+	Code=U100C6F		\n\
+	Desc=TSC1_EXR_TCU报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xF2		\"
+[DTCLIB]		\n\
+	Org=D00C70		\n\
+	Code=U100C70		\n\
+	Desc=TSC1_EXR_TCU报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xF3		\"
+[DTCLIB]		\n\
+	Org=D00C71		\n\
+	Code=U100C71		\n\
+	Desc=TSC1_EMS报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xF4		\"
+[DTCLIB]		\n\
+	Org=D00C72		\n\
+	Code=U100C72		\n\
+	Desc=TSC1_EMS报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xF5		\"
+[DTCLIB]		\n\
+	Org=D00C73		\n\
+	Code=U100C73		\n\
+	Desc=TSC1_E_ACC报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xF6		\"
+[DTCLIB]		\n\
+	Org=D00C74		\n\
+	Code=U100C74		\n\
+	Desc=TSC1_E_ACC报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xF7		\"
+[DTCLIB]		\n\
+	Org=D00C76		\n\
+	Code=U100C76		\n\
+	Desc=TSC1_BE报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xF8		\"
+[DTCLIB]		\n\
+	Org=D00C77		\n\
+	Code=U100C77		\n\
+	Desc=TSC1_BE报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xF9		\"
+[DTCLIB]		\n\
+	Org=D00C78		\n\
+	Code=U100C78		\n\
+	Desc=TSC1_TXJ报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xFA		\"
+[DTCLIB]		\n\
+	Org=D00C79		\n\
+	Code=U100C79		\n\
+	Desc=TSC1_TXJ报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xFB		\"
+[DTCLIB]		\n\
+	Org=D00C7A		\n\
+	Code=U100C7A		\n\
+	Desc=TSC1_AccR报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xFC		\"
+[DTCLIB]		\n\
+	Org=D00C7B		\n\
+	Code=U100C7B		\n\
+	Desc=TSC1_AccR报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xFD		\"
+[DTCLIB]		\n\
+	Org=D00C7C		\n\
+	Code=U100C7C		\n\
+	Desc=TSC1_DR报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xFE		\"
+[DTCLIB]		\n\
+	Org=D00C7D		\n\
+	Code=U100C7D		\n\
+	Desc=TSC1_DR报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x00,0xFF		\"
+[DTCLIB]		\n\
+	Org=D00C7E		\n\
+	Code=U100C7E		\n\
+	Desc=TSC1_EXR_2A报文checksum校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x00		\"
+[DTCLIB]		\n\
+	Org=D00C7F		\n\
+	Code=U100C7F		\n\
+	Desc=TSC1_EXR_2A报文MessageCounter校验错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x01		\"
+[DTCLIB]		\n\
+	Org=D00C80		\n\
+	Code=U100C80		\n\
+	Desc=来自发动机制动器的ERC1报文超时状态		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x02		\"
+[DTCLIB]		\n\
+	Org=D00C81		\n\
+	Code=U100C81		\n\
+	Desc=来自发动机制动器的ERC1报文DLC状态		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x03		\"
+[DTCLIB]		\n\
+	Org=D00C82		\n\
+	Code=U100C82		\n\
+	Desc=EEC1报文数据量故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x04		\"
+[DTCLIB]		\n\
+	Org=D00C10		\n\
+	Code=U100C10		\n\
+	Desc=TSC1_EXR_2A报文DLC故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x05		\"
+[DTCLIB]		\n\
+	Org=D00C16		\n\
+	Code=U100C16		\n\
+	Desc=TSC1_EXR_2A报文超时故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x06		\"
+[DTCLIB]		\n\
+	Org=D00C18		\n\
+	Code=U100C18		\n\
+	Desc=VCUCAN-EBusOff故障/VMSCAN-EBusOff故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x07		\"
+[DTCLIB]		\n\
+	Org=D00C21		\n\
+	Code=U100C21		\n\
+	Desc=VCUCAN-PBusOff故障/VMSCAN-PBusOff故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x08		\"
+[DTCLIB]		\n\
+	Org=D00C2A		\n\
+	Code=U100C2A		\n\
+	Desc=VCUCAN-TBusOff故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x09		\"
+[DTCLIB]		\n\
+	Org=D00C83		\n\
+	Code=U100C83		\n\
+	Desc=TSC1_ER_EBS数据长度错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x0A		\"
+[DTCLIB]		\n\
+	Org=D00C00		\n\
+	Code=U100C00		\n\
+	Desc=VCU与终端校验失败，限转速1000rpm		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x0B		\"
+[DTCLIB]		\n\
+	Org=D00C84		\n\
+	Code=U100C84		\n\
+	Desc=TSC1_ER_EBSChecksum错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x0C		\"
+[DTCLIB]		\n\
+	Org=D00C85		\n\
+	Code=U100C85		\n\
+	Desc=TSC1_ER_EBSMessageCounter错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x0D		\"
+[DTCLIB]		\n\
+	Org=D00C86		\n\
+	Code=U100C86		\n\
+	Desc=TSC1_ER_EBS报文超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x0E		\"
+[DTCLIB]		\n\
+	Org=D00C87		\n\
+	Code=U100C87		\n\
+	Desc=TSC1_ER_TCU数据长度错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x0F		\"
+[DTCLIB]		\n\
+	Org=D00C88		\n\
+	Code=U100C88		\n\
+	Desc=TSC1_ER_TCUChecksum错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x10		\"
+[DTCLIB]		\n\
+	Org=D00C89		\n\
+	Code=U100C89		\n\
+	Desc=TSC1_ER_TCUMessageCounter错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x11		\"
+[DTCLIB]		\n\
+	Org=D00C8A		\n\
+	Code=U100C8A		\n\
+	Desc=TSC1_ER_TCU报文超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x12		\"
+[DTCLIB]		\n\
+	Org=D00C00		\n\
+	Code=U100C00		\n\
+	Desc=VCU与终端校验失败，限转速1000rpm(诊断库无)		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x13		\"
+[DTCLIB]		\n\
+	Org=910407		\n\
+	Code=B110407		\n\
+	Desc=Keyin下TXJ认证请求超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x14		\"
+[DTCLIB]		\n\
+	Org=910408		\n\
+	Code=B110408		\n\
+	Desc=Keyin下TXJ发送Key超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x15		\"
+[DTCLIB]		\n\
+	Org=910409		\n\
+	Code=B110409		\n\
+	Desc=Keyin下TXJ发送Key错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x16		\"
+[DTCLIB]		\n\
+	Org=91040A		\n\
+	Code=B11040A		\n\
+	Desc=ON档下TXJ未发送握手校验命令		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x17		\"
+[DTCLIB]		\n\
+	Org=91040B		\n\
+	Code=B11040B		\n\
+	Desc=ON档下TXJ发送key超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x18		\"
+[DTCLIB]		\n\
+	Org=91040C		\n\
+	Code=B11040C		\n\
+	Desc=ON档下TXJ发送Key错误		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x19		\"
+[DTCLIB]		\n\
+	Org=91040E		\n\
+	Code=B11040E		\n\
+	Desc=ON档下EMS发送seed超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x1A		\"
+[DTCLIB]		\n\
+	Org=91040F		\n\
+	Code=B11040F		\n\
+	Desc=电源异常故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x1B		\"
+[DTCLIB]		\n\
+	Org=150043		\n\
+	Code=P150043		\n\
+	Desc=24V 公共电源1 开路		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x1C		\"
+[DTCLIB]		\n\
+	Org=150000		\n\
+	Code=P150000		\n\
+	Desc=油门踏板1电压值高出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x1D		\"
+[DTCLIB]		\n\
+	Org=150001		\n\
+	Code=P150001		\n\
+	Desc=油门踏板1电压值低于下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x1E		\"
+[DTCLIB]		\n\
+	Org=150002		\n\
+	Code=P150002		\n\
+	Desc=油门踏板1与油门踏板2的两倍的信号关系不可信/加速踏板信号1和信号2电压值2倍关系不可信		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x1F		\"
+[DTCLIB]		\n\
+	Org=150003		\n\
+	Code=P150003		\n\
+	Desc=油门踏板2电压值高出上限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x20		\"
+[DTCLIB]		\n\
+	Org=150004		\n\
+	Code=P150004		\n\
+	Desc=油门踏板2电压值低于下限门槛值		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x21		\"
+[DTCLIB]		\n\
+	Org=D00C01		\n\
+	Code=U100C01		\n\
+	Desc=VCU Limphome故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x22		\"
+[DTCLIB]		\n\
+	Org=D00C13		\n\
+	Code=U100C13		\n\
+	Desc=接收智能终端的key报文和VCU计算的key比对不一致故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x23		\"
+[DTCLIB]		\n\
+	Org=910413		\n\
+	Code=B110413		\n\
+	Desc=与远程网关认证超时		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x24		\"
+[DTCLIB]		\n\
+	Org=910414		\n\
+	Code=B110414		\n\
+	Desc=远程网关主动锁车		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x25		\"
+[DTCLIB]		\n\
+	Org=D00C8F		\n\
+	Code=U100C8F		\n\
+	Desc=与BDU丢失通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x26		\"
+[DTCLIB]		\n\
+	Org=1505B3		\n\
+	Code=P1505B3		\n\
+	Desc=天行健(TXJ)软件版本不一致		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x27		\"
+[DTCLIB]		\n\
+	Org=1505C9		\n\
+	Code=P1505C9		\n\
+	Desc=控制器软件版本不一致		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x28		\"
+[DTCLIB]		\n\
+	Org=D00C8E		\n\
+	Code=U100C8E		\n\
+	Desc=与AC失去通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x29		\"
+[DTCLIB]		\n\
+	Org=1500A3		\n\
+	Code=P1500A3		\n\
+	Desc=电磁离合器接合异常		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x2A		\"
+[DTCLIB]		\n\
+	Org=1500A4		\n\
+	Code=P1500A4		\n\
+	Desc=空压机运行异常		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x2B		\"
+[DTCLIB]		\n\
+	Org=1500A5		\n\
+	Code=P1500A5		\n\
+	Desc=空压机运行严重故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x2C		\"
+[DTCLIB]		\n\
+	Org=D00C9A		\n\
+	Code=U100C9A		\n\
+	Desc=与ACM失去通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x2D		\"
+[DTCLIB]		\n\
+	Org=150043		\n\
+	Code=P150043		\n\
+	Desc=电机冷却出口温度传感器电压超出上限		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x2E		\"
+[DTCLIB]		\n\
+	Org=150080		\n\
+	Code=P150080		\n\
+	Desc=冷却风扇控制输出开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x2F		\"
+[DTCLIB]		\n\
+	Org=D00C4B		\n\
+	Code=U100C4B		\n\
+	Desc=与仪表失去通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x30		\"
+[DTCLIB]		\n\
+	Org=D00C8B		\n\
+	Code=U100C8B		\n\
+	Desc=与PDU丢失通讯		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x31		\"
+[DTCLIB]		\n\
+	Org=150093		\n\
+	Code=P150093		\n\
+	Desc=加速踏板采集故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x32		\"
+[DTCLIB]		\n\
+	Org=15008D		\n\
+	Code=P15008D		\n\
+	Desc=主驱回路预充失败故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x33		\"
+[DTCLIB]		\n\
+	Org=1500A6		\n\
+	Code=P1500A6		\n\
+	Desc=电磁离合器开路故障		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x34		\"
+[DTCLIB]		\n\
+	Org=1505C9		\n\
+	Code=P1505C9		\n\
+	Desc=控制器软件版本不一致		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x35		\"
+[DTCLIB]		\n\
+	Org=1500A9		\n\
+	Code=P1500A9		\n\
+	Desc=电机(MCU)软件版本不一致		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x36		\"
+[DTCLIB]		\n\
+	Org=1501AB		\n\
+	Code=P1501AB		\n\
+	Desc=电动动力转向(EHDS)软件版本不一致		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x37		\"
+[DTCLIB]		\n\
+	Org=1502AC		\n\
+	Code=P1502AC		\n\
+	Desc=DCDC软件版本不一致		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x38		\"
+[DTCLIB]		\n\
+	Org=1503AD		\n\
+	Code=P1503AD		\n\
+	Desc=集成控制器(PDU)软件版本不一致		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x39		\"
+[DTCLIB]		\n\
+	Org=D00C8D		\n\
+	Code=U100C8D		\n\
+	Desc=与EBC通讯失败		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x3A		\"
+[DTCLIB]		\n\
+	Org=D00C99		\n\
+	Code=U100C99		\n\
+	Desc=与MCS通讯失败		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x02,0x00,0x01,0x3B		\"
+[DTCLIB]		\n\
+	Org=D00C95		\n\
+	Code=U100C95		\n\
+	Desc=与IMMO通讯失败		\n\
+	Help=		\n\
+		\"
+
+0x00,0x00,0x05,0x00,0x00,0x00		\"
+[ACTMENU]		\n\
+	SubMenu=低压供电继电器控制	01	PTC低压继电器输出	02	冷却风扇电源继电器输出信号	03	倒车灯继电器信号输出	04	制动灯继电器输出	05	打气泵空压机风扇控制	06	行走提示音关闭信号输出	07	打气泵使能信号输出	08	空气压缩机ON.OFF信号输出	09	禁止加氮指示灯控制输出	0A	氯气浓度故障互锁复位信号	0B	更新内部存储的控制器版本信息	0C	启动熄火控制器功能	0D	车下启动熄火功能	0E	紧急启动功能	0F	远程油门控制功能	10	外部扭矩需求控制功能	11	转速控制功能	12	转矩控制功能	13	巡航车速配置	14	驾驶需求多级车速限制功能	15	取力器配置	16	远程锁车控制功能	17	车型	18	无人驾驶	19	特殊需求	1A	新能源轴机集成	1B	急停功能	1C	离坐下电功能	1D	门未关限扭功能	1E	安全带未系限扭功能	1F	倒挡蠕行	20	电池冷却方案设置	21	细分市场	22	车型版本	23	转向系统形式	24		\n\
+		\"
+
+0x00,0x00,0x05,0x00,0x00,0x01		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=低压供电继电器控制		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A490300		\n\
+	BtnItem2=已激活	2F8A490301		\n\
+	BtnItem3=错误	2F8A490302		\n\
+	BtnItem4=无效	2F8A490303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x02		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=PTC低压继电器输出		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A4A0300		\n\
+	BtnItem2=已激活	2F8A4A0301		\n\
+	BtnItem3=错误	2F8A4A0302		\n\
+	BtnItem4=无效	2F8A4A0303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x03		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=冷却风扇电源继电器输出信号		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A4B0300		\n\
+	BtnItem2=已激活	2F8A4B0301		\n\
+	BtnItem3=错误	2F8A4B0302		\n\
+	BtnItem4=无效	2F8A4B0303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x04		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=倒车灯继电器信号输出		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A4C0300		\n\
+	BtnItem2=已激活	2F8A4C0301		\n\
+	BtnItem3=错误	2F8A4C0302		\n\
+	BtnItem4=无效	2F8A4C0303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x05		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=制动灯继电器输出		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A4D0300		\n\
+	BtnItem2=已激活	2F8A4D0301		\n\
+	BtnItem3=错误	2F8A4D0302		\n\
+	BtnItem4=无效	2F8A4D0303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x06		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=打气泵空压机风扇控制		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A4E0300		\n\
+	BtnItem2=已激活	2F8A4E0301		\n\
+	BtnItem3=错误	2F8A4E0302		\n\
+	BtnItem4=无效	2F8A4E0303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x07		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=行走提示音关闭信号输出		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A500300		\n\
+	BtnItem2=已激活	2F8A500301		\n\
+	BtnItem3=错误	2F8A500302		\n\
+	BtnItem4=无效	2F8A500303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x08		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=打气泵使能信号输出		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A510300		\n\
+	BtnItem2=已激活	2F8A510301		\n\
+	BtnItem3=错误	2F8A510302		\n\
+	BtnItem4=无效	2F8A510303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x09		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=空气压缩机ON.OFF信号输出		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A520300		\n\
+	BtnItem2=已激活	2F8A520301		\n\
+	BtnItem3=错误	2F8A520302		\n\
+	BtnItem4=无效	2F8A520303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x0A		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=禁止加氮指示灯控制输出		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A2E0300		\n\
+	BtnItem2=已激活	2F8A2E0301		\n\
+	BtnItem3=错误	2F8A2E0302		\n\
+	BtnItem4=无效	2F8A2E0303		\n\
+	ExitCmd=		\n\
+		\n"
+
+
+0x00,0x00,0x05,0x00,0x00,0x0B		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=氯气浓度故障互锁复位信号		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=未激活	2F8A2F0300		\n\
+	BtnItem2=已激活	2F8A2F0301		\n\
+	BtnItem3=错误	2F8A2F0302		\n\
+	BtnItem4=无效	2F8A2F0303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x0C		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=更新内部存储的控制器版本信息		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=不触发VCU更新内部存储	2F8A590300		\n\
+	BtnItem2=触发VCU更新内部存储	2F8A590301		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x0D		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=启动熄火控制器功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=禁止	2E884800		\n\
+	BtnItem2=开启	2E884801		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x0E		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=车下启动熄火功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=禁止	2E884B00		\n\
+	BtnItem2=开启	2E884B01		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x0F		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=紧急启动功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=禁止	2E884C00		\n\
+	BtnItem2=开启	2E884C01		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x10		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=远程油门控制功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=禁止	2E884F00		\n\
+	BtnItem2=开启	2E884F01		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x11		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=外部扭矩需求控制功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=禁止	2E885000		\n\
+	BtnItem2=开启	2E885001		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x12		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=转速控制功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=禁止	2E885300		\n\
+	BtnItem2=开启	2E885301		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x13		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=转矩控制功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=禁止	2E8A4200		\n\
+	BtnItem2=开启	2E8A4201		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x14		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=巡航车速配置		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=3		\n\
+	BtnItem1=无巡航	2E885400		\n\
+	BtnItem2=低速巡航	2E885401		\n\
+	BtnItem3=高速巡航	2E885402		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x15		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=驾驶需求多级车速限制功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=禁止	2E885600		\n\
+	BtnItem2=开启	2E885601		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x16		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=取力器配置		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=3		\n\
+	BtnItem1=无取力器配置	2E8A4300		\n\
+	BtnItem2=行车驻车取力	2E8A4301		\n\
+	BtnItem3=驻车取力	2E8A4302		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x17		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=远程锁车控制功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=3		\n\
+	BtnItem1=无锁车功能	2E884D00		\n\
+	BtnItem2=天行健锁车	2E884D01		\n\
+	BtnItem3=供力A锁车	2E884D02		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x18		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=车型		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=自卸车	2E8A5300		\n\
+	BtnItem2=牵引车、载货车	2E8A5301		\n\
+	BtnItem3=环卫车	2E8A5302		\n\
+	BtnItem4=牵车	2E8A5303		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x19		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=无人驾驶		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=其他车辆(非无人驾驶)	2E8A5400		\n\
+	BtnItem2=无人驾驶车辆	2E8A5401		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x1A		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=特殊需求		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=6		\n\
+	BtnItem1=无	2E8A5500		\n\
+	BtnItem2=我国码头	2E8A5501		\n\
+	BtnItem3=自主上装	2E8A5502		\n\
+	BtnItem4=自动驻车	2E8A5503		\n\
+	BtnItem5=巴西	2E8A5504		\n\
+	BtnItem6=波兰	2E8A5505		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x1B		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=新能源输机集成		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=是	2E8A5600		\n\
+	BtnItem2=否	2E8A5601		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x1C		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=急停功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=无	2E8A6400		\n\
+	BtnItem2=有	2E8A6401		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x1D		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=离坐下电功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=无	2E8A6500		\n\
+	BtnItem2=有	2E8A6501		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x1E		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=门未关限扭功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=无	2E8A6600		\n\
+	BtnItem2=有	2E8A6601		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x1F		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=安全带未系限扭功能		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=2		\n\
+	BtnItem1=无	2E8A6700		\n\
+	BtnItem2=有	2E8A6701		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x20		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=倒挡蠕行		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=4		\n\
+	BtnItem1=无	2E8A6E00		\n\
+	BtnItem2=有	2E8A6E01		\n\
+	BtnItem3=预留1	2E8A6E02		\n\
+	BtnItem4=预留2	2E8A6E02		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x21		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=电池冷却方案设置		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=6		\n\
+	BtnItem1=独立	2E8A7200		\n\
+	BtnItem2=集成余热	2E8A7201		\n\
+	BtnItem3=集成无余热	2E8A7202		\n\
+	BtnItem4=热泵	2E8A7203		\n\
+	BtnItem5=独立+PTC	2E8A7204		\n\
+	BtnItem6=独立+PTC2	2E8A7205		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x22		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=细分市场		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=20		\n\
+	BtnItem1=未定义	2E59A400		\n\
+	BtnItem2=日用工业品运输	2E59A401		\n\
+	BtnItem3=钢厂运输	2E59A402		\n\
+	BtnItem4=煤炭运输	2E59A403		\n\
+	BtnItem5=砂石料运输	2E59A404		\n\
+	BtnItem6=港口运输	2E59A405		\n\
+	BtnItem7=城建渣土	2E59A406		\n\
+	BtnItem8=矿用工程	2E59A407		\n\
+	BtnItem9=公路载货运输	2E59A408		\n\
+	BtnItem10=公路重合运输	2E59A409		\n\
+	BtnItem11=公路重载运输	2E59A40A		\n\
+	BtnItem12=环卫	2E59A40B		\n\
+	BtnItem13=搅拌运输	2E59A40C		\n\
+	BtnItem14=快速运输	2E59A40D		\n\
+	BtnItem15=危化品运输	2E59A40E		\n\
+	BtnItem16=冷链运输	2E59A40F		\n\
+	BtnItem17=零担运输	2E59A410		\n\
+	BtnItem18=绿通运输	2E59A411		\n\
+	BtnItem19=赛车	2E59A412		\n\
+	BtnItem20=油田车	2E59A413		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x23		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=车型版本		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=9		\n\
+	BtnItem1=未定义	2E59A500		\n\
+	BtnItem2=轻量化版	2E59A501		\n\
+	BtnItem3=复合版	2E59A502		\n\
+	BtnItem4=加强版/新加强版	2E59A503		\n\
+	BtnItem5=超强版	2E59A504		\n\
+	BtnItem6=标载版	2E59A505		\n\
+	BtnItem7=标准版	2E59A506		\n\
+	BtnItem8=矿用加强版	2E59A507		\n\
+	BtnItem9=重载版	2E59A508		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x05,0x00,0x00,0x24		\"
+[ACTLIB]		\n\
+	Mode=02		\n\
+	Name=转向系统形式		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=8		\n\
+	BtnItem1=HFS	2E59A600		\n\
+	BtnItem2=久隆EHS非冗余(全功能)	2E59A601		\n\
+	BtnItem3=久隆EHS非冗余(应急转向)	2E59A602		\n\
+	BtnItem4=博世EPS非冗余	2E59A603		\n\
+	BtnItem5=采埃孚EHS非冗余	2E59A604		\n\
+	BtnItem6=万力EHS非冗余	2E59A605		\n\
+	BtnItem7=舍弗勒HPS双冗余	2E59A606		\n\
+	BtnItem8=久隆EHS双冗余	2E59A607		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x00		\"
+[SPECMENU]		\n\
+	SubMenu=车辆VIN码	01	车辆PIN码	02	VCU中锁车激活码(与发动机认证密钥)	03	固定密钥(与发动机认证密钥)	04	冷却水泵控制	05	冷却风扇控制	06	车重限速功能-限车速值	07	车重限速功能-限车重值	08	油门控取力器最高转速值(报文控制)	09	油门控取力器最高转速值(硬线控制)	0A	一键定速(硬线控制)	0B	取力器作业车速-电动上柴限制车速	0C	减速机的转速比	0D	电机转速与罐的传动比	0E	电机转速限制值	0F	电机扭矩限制值	10	最高车速(前进时)	11	配置字前八十	12	配置字后八十	13		\n\
+		\"
+
+0x00,0x00,0x06,0x00,0x00,0x01		\"
+[SPECLIB]		\n\
+	Mode=0301		\n\
+	Name=车辆VIN码		\n\
+	BtnNum=2		\n\
+	BtnItem1=读取		\n\
+	BtnItem2=输入	2EF190		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	InputNum=1		\n\
+	InputItem1=请输入VIN(17位)	U	17	CALC_ASCII2HEX		\n\
+	CheckInputMode=03		\n\
+	DsNum=1		\n\
+	DsItem1=VIN		CALC_HEX2ASCII	22F190	3	17		\n\
+	PromptMsg=正在读取VIN...	正在写入VIN..	写入VIN成功	写入VIN失败		\n\
+		\"
+
+0x00,0x00,0x06,0x00,0x00,0x02		\"
+[SPECLIB]		\n\
+	Mode=0301		\n\
+	Name=车辆PIN码		\n\
+	BtnNum=2		\n\
+	BtnItem1=读取		\n\
+	BtnItem2=输入	2E8B06		\n\
+	SecAccMode=0322		\n\
+	SecAccEnterCmd=1003		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	InputNum=1		\n\
+	InputItem1=请输入PIN码(32位)	X	32	CALC_HEXSTR2HEX		\n\
+	CheckInputMode=03		\n\
+	DsNum=1		\n\
+	DsItem1=PIN码		CALC_HEX2HEXSTR	228B06	3	16		\n\
+	PromptMsg=正在读取PIN码...	正在写入PIN码..	写入PIN码成功	写入PIN码失败		\n\
+		\"
+
+0x00,0x00,0x06,0x00,0x00,0x03		\"
+[SPECLIB]		\n\
+	Mode=0301		\n\
+	Name=VCU中锁车激活码(与发动机认证密钥)		\n\
+	BtnNum=2		\n\
+	BtnItem1=读取		\n\
+	BtnItem2=输入	2E8B07		\n\
+	SecAccMode=0322		\n\
+	SecAccEnterCmd=1003		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	InputNum=1		\n\
+	InputItem1=请输入VCU中锁车激活码(与发动机认证密钥)(6位)	X	6	CALC_HEXSTR2HEX		\n\
+	CheckInputMode=03		\n\
+	DsNum=1		\n\
+	DsItem1=VCU中锁车激活码(与发动机认证密钥)		CALC_HEX2HEXSTR	228B07	3	3		\n\
+	PromptMsg=正在读取VCU中锁车激活码(与发动机认证密钥)...	正在写入VCU中锁车激活码(与发动机认证密钥)..	写入VCU中锁车激活码(与发动机认证密钥)成功	写入VCU中锁车激活码(与发动机认证密钥)失败		\n\
+		\"
+
+0x00,0x00,0x06,0x00,0x00,0x04		\"
+[SPECLIB]		\n\
+	Mode=0301		\n\
+	Name=固定密钥(与发动机认证密钥)		\n\
+	BtnNum=2		\n\
+	BtnItem1=读取		\n\
+	BtnItem2=输入	2E8B08		\n\
+	SecAccMode=0322		\n\
+	SecAccEnterCmd=1003		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	InputNum=1		\n\
+	InputItem1=请输入固定密钥(与发动机认证密钥)(6位)	X	6	CALC_HEXSTR2HEX		\n\
+	CheckInputMode=03		\n\
+	DsNum=1		\n\
+	DsItem1=固定密钥(与发动机认证密钥)		CALC_HEX2HEXSTR	228B08	3	3		\n\
+	PromptMsg=正在读取固定密钥(与发动机认证密钥)...	正在写入固定密钥(与发动机认证密钥)..	写入固定密钥(与发动机认证密钥)成功	写入固定密钥(与发动机认证密钥)失败		\n\
+		\"
+
+0x00,0x00,0x06,0x00,0x00,0x05		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	Name=冷却水泵控制		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2F8A2A03		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~100)	N	10	CALC_NORMAL_1_2.5_0	0	100	4	1		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=冷却水泵控制		"%d","x1*2.5;"	228A2A	4	1		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x06		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	Name=冷却风扇控制		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2F8A2B03		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~100)	N	10	CALC_NORMAL_1_2.5_0	0	100	4	1		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=冷却风扇控制		"%d","x1*2.5;"	228A2B	4	1		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x07		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	WriteMode=2		\n\
+	Name=车重限速功能-限车速值		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E8A680000		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~250)	N	10	CALC_NORMAL_1_1_0	0	250	3	1		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=车重限速功能-限车速值		"%d","x1*1;"	228A68	3	1		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x08		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	Name=车重限速功能-限车重值		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E8A69		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~250)	N	10	CALC_NORMAL_1_1_0	0	250	3	1		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=车重限速功能-限车重值		"%d","x1*1;"	228A69	3	1		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x09		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	Name=油门控取力器最高转速值(报文控制)		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E8A6A		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~33535)	N	10	CALC_NORMAL_1_1_32000	0	33535	3	2		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=油门控取力器最高转速值(报文控制)		"%d","((x1<<8)+x2)*1 + 32000;"	228A6A	3	2		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x0A		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	Name=油门控取力器最高转速值(硬线控制)		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E8A6B		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~33535)	N	10	CALC_NORMAL_1_1_32000	0	33535	3	2		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=油门控取力器最高转速值(硬线控制)		"%d","((x1<<8)+x2)*1 + 32000;"	228A6B	3	2		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x0B		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	Name=一键定速(硬线控制)		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E8A6C		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~33535)	N	10	CALC_NORMAL_1_1_32000	0	33535	3	2		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=一键定速(硬线控制)		"%d","((x1<<8)+x2)*1 + 32000;"	228A6C	3	2		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x0C		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	WriteMode=2		\n\
+	Name=取力器作业车速-电动上柴限制车速		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E8B0E0000		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~250)	N	10	CALC_NORMAL_1_1_0	0	250	3	1		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=取力器作业车速-电动上柴限制车速		"%d","x1*1;"	228B0E	3	1		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x0D		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	WriteMode=5		\n\
+	Name=减速机的转速比		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E59A0		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~100)	N	10	CALC_NORMAL_1_100_0	0	100	3	2		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=减速机的转速比		"%d","((x1<<8)+x2)*100;"	2259A0	3	2		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x0E		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	WriteMode=5		\n\
+	Name=电机转速与罐的传动比		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E59A1		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~100)	N	10	CALC_NORMAL_1_100_0	0	100	3	2		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=电机转速与罐的传动比		"%d","((x1<<8)+x2)*100;"	2259A1	3	2		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x0F		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	Name=电机转速限制值		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E59A2		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~32000)	N	10	CALC_NORMAL_1_1_32000	0	32000	3	2		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=电机转速限制值		"%d","((x1<<8)+x2)*1 + 32000;"	2259A2	3	2		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x10		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	Name=电机扭矩限制值		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E59A3		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~6400)	N	10	CALC_NORMAL_1_5_32000	0	6400	3	2		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=电机转速限制值		"%d","((x1<<8)+x2)*5 + 32000;"	2259A3	3	2		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x11		\"
+[SPECLIB]		\n\
+	Mode=0302		\n\
+	WriteMode=2		\n\
+	Name=最高车速(前进时)		\n\
+	PromptInfo=		\n\
+	SecAccMode=0322		\n\
+	ZeroSendFlg=FALSE		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	EnterCmd=1003		\n\
+	BtnNum=1		\n\
+	BtnItem1=输入	2E8B000000		\n\
+	InputNum=1		\n\
+	InputItem1=输入范围(0~250)	N	10	CALC_NORMAL_1_1_0	0	250	3	1		\n\
+	CheckInputMode=05		\n\
+	DsNum=1		\n\
+	DsItem1=前进时最高车速		"%d","x1*1;"	228B00	3	1		\n\
+	ExitCmd=		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x12		\"
+[SPECLIB]		\n\
+	Mode=0301		\n\
+	Name=配置字前八十		\n\
+	BtnNum=2		\n\
+	BtnItem1=读取		\n\
+	BtnItem2=输入	2E8B0F		\n\
+	SecAccMode=0322		\n\
+	SecAccEnterCmd=1003		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	InputNum=1		\n\
+	InputItem1=请输入配置字前八十(160位)	X	160	CALC_HEXSTR2HEX		\n\
+	CheckInputMode=03		\n\
+	DsNum=1		\n\
+	DsItem1=配置字前八十		CALC_HEX2HEXSTR	228B0F	3	80		\n\
+	PromptMsg=正在读取配置字前八十...	正在写入配置字前八十..	写入配置字前八十成功	写入配置字前八十失败		\n\
+		\n"
+
+0x00,0x00,0x06,0x00,0x00,0x13		\"
+[SPECLIB]		\n\
+	Mode=0301		\n\
+	Name=配置字后八十		\n\
+	BtnNum=2		\n\
+	BtnItem1=读取		\n\
+	BtnItem2=输入	2E8B10		\n\
+	SecAccMode=0322		\n\
+	SecAccEnterCmd=1003		\n\
+	SecAccSeedCmd=2701		\n\
+	SecAccKeyCmd=27020000		\n\
+	SecAccMask=0x81		\n\
+	InputNum=1		\n\
+	InputItem1=请输入配置字后八十(160位)	X	160	CALC_HEXSTR2HEX		\n\
+	CheckInputMode=03		\n\
+	DsNum=1		\n\
+	DsItem1=配置字后八十		CALC_HEX2HEXSTR	228B10	3	80		\n\
+	PromptMsg=正在读取配置字后八十...	正在写入配置字后八十..	写入配置字后八十成功	写入配置字后八十失败		\n\
+		\n"
