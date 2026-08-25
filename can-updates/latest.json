@@ -1,7 +1,7 @@
 {
   "version": "0.3.46",
   "exeUrl": "https://1d35b8eb7ab748868628de5d2f17f083.app.workbuddy.link/#download",
-  "baseUrl": "https://xtooldev.github.io/cantool/can-updates",
+  "baseUrl": "https://1d35b8eb7ab748868628de5d2f17f083.app.workbuddy.link/updates",
   "files": [
     {
       "path": "CANAnalyzer.exe",
