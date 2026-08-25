@@ -1,20 +1,20 @@
 {
   "version": "0.3.46",
-  "exeUrl": "https://1d35b8eb7ab748868628de5d2f17f083.app.workbuddy.link/#download",
+  "exeUrl": "https://1d35b8eb7ab748868628de5d2f17f083.app.workbuddy.link/updates/CANAnalyzer.exe",
   "baseUrl": "https://1d35b8eb7ab748868628de5d2f17f083.app.workbuddy.link/updates",
   "files": [
     {
       "path": "CANAnalyzer.exe",
-      "size": 9973760,
-      "url": "https://1d35b8eb7ab748868628de5d2f17f083.app.workbuddy.link/#download"
+      "size": 11985920,
+      "url": "https://1d35b8eb7ab748868628de5d2f17f083.app.workbuddy.link/updates/CANAnalyzer.exe"
     },
     {
       "path": "resources/updater.exe",
-      "size": 319488
+      "size": 317952
     },
     {
       "path": "resources/fcm_can_helper.exe",
-      "size": 126976
+      "size": 140288
     },
     {
       "path": "resources/ControlCAN.dll",
