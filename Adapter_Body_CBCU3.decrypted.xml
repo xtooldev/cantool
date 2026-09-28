@@ -1,0 +1,80 @@
+<DiagAdapters>
+	<DiagAdapter name="智多星二代USB" hardwareVersion="2.0" description="潍柴自主开发的诊断工具，第二版，带有USB连接接口" icon="图片\适配器\智多星二代.jpg" company="潍柴动力股份有限公司" type="USB" standard="DiagTalent" class="AdapterUSBDiagSmart" select="False" vid="VID_1FC9" pid="PID_2003" mode="" typeclass="low" log="false">
+		<HardwareInterfaces>
+			<HardwareInterface type="OBD" channelID="0" description="OBD-2" select="true" timeout="500">
+				<Pin number="6" class="CAN0H" channel="1" description="" select="True" passFilter="18DAF221" busrate="250000" />
+				<Pin number="14" class="CAN0L" channel="1" description="" select="True" passFilter="18DAF221" busrate="250000" />
+			</HardwareInterface>
+		</HardwareInterfaces>
+		<JumperInterfaces>
+			<JumperInterface type="OBD" channelID="0" description="" select="true">
+				<JumpPin number="6" jumpNumber="6" resistance120="true" class="CANH" channel="1" description="" select="true" busrate="250000" />
+				<JumpPin number="14" jumpNumber="14" resistance120="true" class="CANL" channel="1" description="" select="true" busrate="250000" />
+			</JumperInterface>
+		</JumperInterfaces>
+		<DriverDLLs>
+			<DriverDLL path="DLL\AdapterUSBDiagSmart.dll" version="V1.0" />
+		</DriverDLLs>
+	</DiagAdapter>
+	<DiagAdapter name="智多星二代WIFI" hardwareVersion="2.0" description="潍柴自主开发的诊断工具，第二版，带有USB连接接口" icon="图片\适配器\智多星二代.jpg" company="潍柴动力股份有限公司" type="WiFi" standard="DiagTalent" class="AdapterWiFiDiagSmart" select="False" vid="" pid="" mode="" typeclass="low" log="false">
+		<HardwareInterfaces>
+			<HardwareInterface type="OBD" channelID="0" description="OBD-2" select="true" timeout="500">
+				<Pin number="6" class="CAN0H" channel="1" description="" select="True" passFilter="18DAF221" busrate="250000" />
+				<Pin number="14" class="CAN0L" channel="1" description="" select="True" passFilter="18DAF221" busrate="250000" />
+			</HardwareInterface>
+		</HardwareInterfaces>
+		<JumperInterfaces>
+			<JumperInterface type="OBD" channelID="0" description="" select="true">
+				<JumpPin number="6" jumpNumber="6" resistance120="true" class="CANH" channel="1" description="" select="true" busrate="250000" />
+				<JumpPin number="14" jumpNumber="14" resistance120="true" class="CANL" channel="1" description="" select="true" busrate="250000" />
+			</JumperInterface>
+		</JumperInterfaces>
+		<DriverDLLs>
+			<DriverDLL path="DLL\AdapterWiFiDiagSmart.dll" version="V1.0" />
+		</DriverDLLs>
+	</DiagAdapter>
+	<DiagAdapter name="标准版WIFI/USB-高速模式" hardwareVersion="2.0" description="潍柴自主开发的诊断工具，第二版，带有USB连接接口" icon="Pictures\AdapterPictures\DiagSmart2.jpg" company="潍柴动力股份有限公司" type="USB" standard="DiagTalent" class="AdapterUSBDiagSmart_YZ" select="True" vid="VID_0525" pid="PID_A4A2" mode="1" typeclass="high" sampoint="01" log="false">
+		<HardwareInterfaces>
+			<HardwareInterface type="OBD" channelID="0" description="OBD-2" select="true" timeout="500">
+				<Pin number="6" class="CAN1H" channel="1" description="第二通道" select="True" passFilter="18DAF221" busrate="250000" />
+				<Pin number="14" class="CAN1L" channel="1" description="ddd" select="True" passFilter="18DAF221" busrate="250000" />
+			</HardwareInterface>
+		</HardwareInterfaces>
+		<DriverDLLs>
+			<DriverDLL path="DLL\AdapterUSBDiagSmart_YZ.dll" version="V1.0" />
+		</DriverDLLs>
+	</DiagAdapter>
+	<DiagAdapter name="标准版蓝牙-高速模式" hardwareVersion="2.0" description="潍柴自主开发的诊断工具，标准版MINI，带有蓝牙通讯接口" icon="Pictures\AdapterPictures\DiagSmart2.jpg" company="潍柴动力股份有限公司" type="USB" standard="DiagTalent" class="AdapterBluetoothDiagSmart" select="False" vid="" pid="" mode="1" typeclass="high" log="false">
+		<HardwareInterfaces>
+			<HardwareInterface type="OBD" channelID="0" description="OBD-2" select="true" timeout="500">
+				<Pin number="6" class="CAN1H" channel="1" description="第二通道" select="True" passFilter="18DAF221" busrate="250000" />
+				<Pin number="14" class="CAN1L" channel="1" description="ddd" select="True" passFilter="18DAF221" busrate="250000" />
+			</HardwareInterface>
+		</HardwareInterfaces>
+		<DriverDLLs>
+			<DriverDLL path="DLL\AdapterBluetoothDiagSmart.dll" version="V1.0" />
+		</DriverDLLs>
+	</DiagAdapter>
+	<DiagAdapter name="智多星新版二代USB" hardwareVersion="2.0" description="潍柴自主开发的诊断工具，标准版MINI，带有蓝牙通讯接口" icon="Pictures\AdapterPictures\DiagSmart2.jpg" company="潍柴动力股份有限公司" type="USB" standard="DiagTalent" class="AdapterUSBMINI" select="False" vid="" pid="" mode=" " typeclass="low" log="false">
+		<HardwareInterfaces>
+			<HardwareInterface type="OBD" channelID="0" description="OBD-2" select="true" timeout="500">
+				<Pin number="6" class="CAN1H" channel="1" description="第二通道" select="True" passFilter="18DAF221" busrate="250000" />
+				<Pin number="14" class="CAN1L" channel="1" description="ddd" select="True" passFilter="18DAF221" busrate="250000" />
+			</HardwareInterface>
+		</HardwareInterfaces>
+		<DriverDLLs>
+			<DriverDLL path="DLL\AdapterUSBMINI.dll" version="V1.0" />
+		</DriverDLLs>
+	</DiagAdapter>
+	<DiagAdapter name="中国重汽六合一USB" hardwareVersion="2.0" description="潍柴自主开发的诊断工具，第二版，适配重汽盒子带有USB连接接口" icon="Pictures\AdapterPictures\DiagSmart2.jpg" company="潍柴动力股份有限公司" type="USB" standard="DiagTalent" class="AdapterUSBZQ61" select="False" vid="VID_0403" pid="PID_6015" mode="" typeclass="">
+		<HardwareInterfaces>
+			<HardwareInterface type="OBD" channelID="0" description="OBD-2" select="true" timeout="500">
+				<Pin number="6" class="CAN1H" channel="1" description="第二通道" select="True" passFilter="" busrate="250000" />
+				<Pin number="14" class="CAN1L" channel="1" description="ddd" select="True" passFilter="" busrate="250000" />
+			</HardwareInterface>
+		</HardwareInterfaces>
+		<DriverDLLs>
+			<DriverDLL path="DLL\AdapterUSBZQ61.dll" version="V1.0" />
+		</DriverDLLs>
+	</DiagAdapter>
+</DiagAdapters>
